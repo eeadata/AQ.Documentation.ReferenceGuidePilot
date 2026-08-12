@@ -1,0 +1,445 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ModelObjectiveEstimation &mdash; AQ eReference Guide 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cf8c5278" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ObservationMeasurementStatistics" href="ObservationMeasurementStatistics.html" />
+    <link rel="prev" title="SamplingProcess" href="SamplingProcess.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AQ eReference Guide
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../diagram.html">Data model diagram</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tables</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Authority.html">Authority</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MeasurementStation.html">MeasurementStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SamplingPoint.html">SamplingPoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SamplingPointLocation.html">SamplingPointLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SamplingProcess.html">SamplingProcess</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ModelObjectiveEstimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObservationMeasurementStatistics.html">ObservationMeasurementStatistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObservationMeasurementInventory.html">ObservationMeasurementInventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MOEResultGrid.html">MOEResultGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MOEResultInventory.html">MOEResultInventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ZoneGeometry.html">ZoneGeometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ZoneGeometryGrid.html">ZoneGeometryGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssessmentRegimeZone.html">AssessmentRegimeZone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ComplianceAssessmentMethod.html">ComplianceAssessmentMethod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpatialRepresentativeness.html">SpatialRepresentativeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SRSGrid.html">SRSGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SRSInventory.html">SRSInventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PollutionLevelAdjustment.html">PollutionLevelAdjustment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CompliancePlanLink.html">CompliancePlanLink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plan.html">Plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlanScenario.html">PlanScenario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SourceApportionment.html">SourceApportionment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ScenarioMeasure.html">ScenarioMeasure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Measure.html">Measure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObservationMeasurementResultPNSD.html">ObservationMeasurementResultPNSD</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AQ eReference Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tables</a></li>
+      <li class="breadcrumb-item active">ModelObjectiveEstimation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tables/ModelObjectiveEstimation.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="modelobjectiveestimation">
+<h1>ModelObjectiveEstimation<a class="headerlink" href="#modelobjectiveestimation" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="../_images/ModelObjectiveEstimation.png"><img alt="ModelObjectiveEstimation" class="align-right" src="../_images/ModelObjectiveEstimation.png" style="width: 200px;" />
+</a>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#attributes" id="id1">Attributes</a></p></li>
+<li><p><a class="reference internal" href="#attribute-details" id="id2">Attribute details</a></p>
+<ul>
+<li><p><a class="reference internal" href="#moe-01-countrycode" id="id3">MOE_01 - CountryCode</a></p></li>
+<li><p><a class="reference internal" href="#moe-02-assessmentmethodid" id="id4">MOE_02 - AssessmentMethodId</a></p></li>
+<li><p><a class="reference internal" href="#moe-03-dataaggregationprocessid" id="id5">MOE_03 - DataAggregationProcessId</a></p></li>
+<li><p><a class="reference internal" href="#moe-04-assessmentmethodname" id="id6">MOE_04 - AssessmentMethodName</a></p></li>
+<li><p><a class="reference internal" href="#moe-05-pollutantid" id="id7">MOE_05 - PollutantId</a></p></li>
+<li><p><a class="reference internal" href="#moe-06-resultencoding" id="id8">MOE_06 - ResultEncoding</a></p></li>
+<li><p><a class="reference internal" href="#moe-07-methodapplication" id="id9">MOE_07 - MethodApplication</a></p></li>
+<li><p><a class="reference internal" href="#moe-08-genericmqi" id="id10">MOE_08 - GenericMQI</a></p></li>
+<li><p><a class="reference internal" href="#moe-09-dataqualitydocumentid" id="id11">MOE_09 - DataQualityDocumentId</a></p></li>
+<li><p><a class="reference internal" href="#moe-10-methoddocumentid" id="id12">MOE_10 - MethodDocumentId</a></p></li>
+<li><p><a class="reference internal" href="#moe-11-country" id="id13">MOE_11 - Country</a></p></li>
+<li><p><a class="reference internal" href="#moe-12-pollutant" id="id14">MOE_12 - Pollutant</a></p></li>
+<li><p><a class="reference internal" href="#moe-13-dataaggregationprocess" id="id15">MOE_13 - DataAggregationProcess</a></p></li>
+<li><p><a class="reference internal" href="#moe-14-deletion" id="id16">MOE_14 - Deletion</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="attributes">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Attributes</a><a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute Code</p></th>
+<th class="head"><p>Attribute Name</p></th>
+<th class="head"><p>SQL DB Data Type</p></th>
+<th class="head"><p>ReportNet3 Data Type</p></th>
+<th class="head"><p>Properties</p></th>
+<th class="head"><p>Code list</p></th>
+<th class="head"><p>Related table(s)</p></th>
+<th class="head text-center"><p>In Reporting</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MOE_01</p></td>
+<td><p>CountryCode</p></td>
+<td><p>varchar(2)</p></td>
+<td><p>string</p></td>
+<td><p>PK</p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/common/countries">countries</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MOE_02</p></td>
+<td><p>AssessmentMethodId</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p>PK</p></td>
+<td><p></p></td>
+<td><p>ComplianceAssessmentMethod<br>SpatialRepresentativeness<br>PollutionLevelAdjustment<br>PlanScenario<br>MOEResultInline<br>MOEResultExternal</p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>MOE_03</p></td>
+<td><p>DataAggregationProcessId</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p>PK</p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/aggregationprocess/view">aggregationprocess</a></p></td>
+<td><p>MOEResultInline<br>MOEResultExternal</p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MOE_04</p></td>
+<td><p>AssessmentMethodName</p></td>
+<td><p>varchar(150)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>MOE_05</p></td>
+<td><p>PollutantId</p></td>
+<td><p>int</p></td>
+<td><p>numeric</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view">pollutant</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MOE_06</p></td>
+<td><p>ResultEncoding</p></td>
+<td><p>varchar(10)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/resultencoding">resultencoding</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>MOE_07</p></td>
+<td><p>MethodApplication</p></td>
+<td><p>varchar(20)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/modelapplication">modelapplication</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MOE_08</p></td>
+<td><p>GenericMQI</p></td>
+<td><p>decimal(5,2)</p></td>
+<td><p>numeric</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>MOE_09</p></td>
+<td><p>DataQualityDocumentId</p></td>
+<td><p>varchar(150)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Documentation</p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MOE_10</p></td>
+<td><p>MethodDocumentId</p></td>
+<td><p>varchar(150)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Documentation</p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>MOE_11</p></td>
+<td><p>Country</p></td>
+<td><p>varchar(20)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>MOE_12</p></td>
+<td><p>Pollutant</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>MOE_13</p></td>
+<td><p>DataAggregationProcess</p></td>
+<td><p>varchar(XXX)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>MOE_14</p></td>
+<td><p>Deletion</p></td>
+<td><p>bit</p></td>
+<td><p>boolean</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>N</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">Country</span></code>, <code class="docutils literal notranslate"><span class="pre">Pollutant</span></code>, <code class="docutils literal notranslate"><span class="pre">DataAggregationProcess</span></code> and <code class="docutils literal notranslate"><span class="pre">Deletion</span></code> are Reference attributes without a corresponding attribute in the reporting data model.</p>
+</div>
+</section>
+<section id="attribute-details">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Attribute details</a><a class="headerlink" href="#attribute-details" title="Link to this heading"></a></h2>
+<section id="moe-01-countrycode">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">MOE_01 - CountryCode</a><a class="headerlink" href="#moe-01-countrycode" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Country or territory ISO2 code.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="moe-02-assessmentmethodid">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">MOE_02 - AssessmentMethodId</a><a class="headerlink" href="#moe-02-assessmentmethodid" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Identifier of the assessment method (model), given by data provider.</p>
+<p><strong>Remarks</strong></p>
+<p>AssessmentMethodId which is model or OBE identifier is understood as an application of modelling or estimation methodology.
+It may be re-used for different years if the methodology and data sources remain the same (for example when the same source of meteorological data is used with data from different years).</p>
+<hr class="docutils" />
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="moe-03-dataaggregationprocessid">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">MOE_03 - DataAggregationProcessId</a><a class="headerlink" href="#moe-03-dataaggregationprocessid" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Identifier for the process of data aggregation into statistical values.</p>
+<p><strong>Remarks</strong></p>
+<p>Several different statistics may be generated by the same AssessmentMethodId (for example where time series are modelled and subsequently aggregated).</p>
+<hr class="docutils" />
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="moe-04-assessmentmethodname">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">MOE_04 - AssessmentMethodName</a><a class="headerlink" href="#moe-04-assessmentmethodname" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Name of model or OBE which can be re-used with different AssessmentMethodId, e.g. ‘CHIMERE’, ‘WRF-Chem’, etc.</p>
+<p><strong>Remarks</strong></p>
+<p>Examples include model names such as ‘CHIMERE’, ‘WRF-Chem’, etc.</p>
+<hr class="docutils" />
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="moe-05-pollutantid">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">MOE_05 - PollutantId</a><a class="headerlink" href="#moe-05-pollutantid" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Code of the air pollutant being measured, as per Data Dictionary standards.</p>
+<p><strong>Remarks</strong></p>
+<p>Only one pollutant can be handled by a single AssessmentMethodId (model/OBE).</p>
+<hr class="docutils" />
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="moe-06-resultencoding">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">MOE_06 - ResultEncoding</a><a class="headerlink" href="#moe-06-resultencoding" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Encoding method used for model results (‘zone’, ‘internal’ or ‘external’).</p>
+<p><strong>Remarks</strong></p>
+<p>Allowed values include:</p>
+<ul class="simple">
+<li><p>zone</p></li>
+<li><p>inline</p></li>
+<li><p>external</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="moe-07-methodapplication">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">MOE_07 - MethodApplication</a><a class="headerlink" href="#moe-07-methodapplication" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Purpose of the model application (e.g., assessment, adjustment, scenario, spatial representativeness)</p>
+<p><strong>Remarks</strong></p>
+<p>The same Model/OBE identifier can only have one MethodApplication.</p>
+<hr class="docutils" />
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="moe-08-genericmqi">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">MOE_08 - GenericMQI</a><a class="headerlink" href="#moe-08-genericmqi" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Modelling Quality Indicator</p>
+<p><strong>Remarks</strong></p>
+<p>MQI is reported here because it may originate from model or OBE validation exercises not directly related to the area for which modelling results are submitted within AQ e-Reporting.
+It is considered general information describing the quality of the modelling application used in the reporting.</p>
+<hr class="docutils" />
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="moe-09-dataqualitydocumentid">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">MOE_09 - DataQualityDocumentId</a><a class="headerlink" href="#moe-09-dataqualitydocumentid" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Identifier of the report describing the model given by data provider.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="moe-10-methoddocumentid">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">MOE_10 - MethodDocumentId</a><a class="headerlink" href="#moe-10-methoddocumentid" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Identifier of the report detailing the quality of the modelled data given by data provider.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="moe-11-country">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">MOE_11 - Country</a><a class="headerlink" href="#moe-11-country" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Name of the country.</p>
+<p><strong>In Reporting</strong></p>
+<p>N - No corresponding reporting attribute.</p>
+</section>
+<section id="moe-12-pollutant">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">MOE_12 - Pollutant</a><a class="headerlink" href="#moe-12-pollutant" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Name of the air pollutant being measured, as per Data Dictionary standards.</p>
+<p><strong>In Reporting</strong></p>
+<p>N - No corresponding reporting attribute.</p>
+</section>
+<section id="moe-13-dataaggregationprocess">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">MOE_13 - DataAggregationProcess</a><a class="headerlink" href="#moe-13-dataaggregationprocess" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Label of the process of data aggregation into statistical values.</p>
+<p><strong>In Reporting</strong></p>
+<p>N - No corresponding reporting attribute.</p>
+</section>
+<section id="moe-14-deletion">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">MOE_14 - Deletion</a><a class="headerlink" href="#moe-14-deletion" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Flag to indicate that this element must be deleted.</p>
+<p><strong>In Reporting</strong></p>
+<p>N - No corresponding reporting attribute.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="SamplingProcess.html" class="btn btn-neutral float-left" title="SamplingProcess" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ObservationMeasurementStatistics.html" class="btn btn-neutral float-right" title="ObservationMeasurementStatistics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, EEA AQ Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

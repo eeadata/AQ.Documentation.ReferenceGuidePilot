@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tables &mdash; AQ eReference Guide 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cf8c5278" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Authority" href="Authority.html" />
+    <link rel="prev" title="Data model diagram" href="../diagram.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AQ eReference Guide
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../diagram.html">Data model diagram</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Authority.html">Authority</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MeasurementStation.html">MeasurementStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SamplingPoint.html">SamplingPoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SamplingPointLocation.html">SamplingPointLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SamplingProcess.html">SamplingProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelObjectiveEstimation.html">ModelObjectiveEstimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObservationMeasurementStatistics.html">ObservationMeasurementStatistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObservationMeasurementInventory.html">ObservationMeasurementInventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MOEResultGrid.html">MOEResultGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MOEResultInventory.html">MOEResultInventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ZoneGeometry.html">ZoneGeometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ZoneGeometryGrid.html">ZoneGeometryGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssessmentRegimeZone.html">AssessmentRegimeZone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ComplianceAssessmentMethod.html">ComplianceAssessmentMethod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpatialRepresentativeness.html">SpatialRepresentativeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SRSGrid.html">SRSGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SRSInventory.html">SRSInventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PollutionLevelAdjustment.html">PollutionLevelAdjustment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CompliancePlanLink.html">CompliancePlanLink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plan.html">Plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlanScenario.html">PlanScenario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SourceApportionment.html">SourceApportionment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ScenarioMeasure.html">ScenarioMeasure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Measure.html">Measure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObservationMeasurementResultPNSD.html">ObservationMeasurementResultPNSD</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AQ eReference Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tables</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tables/index.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tables">
+<h1>Tables<a class="headerlink" href="#tables" title="Link to this heading"></a></h1>
+<p>Select a reference table below to view its structure and attributes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tables displayed in dark grey and marked <strong>REFERENCE ONLY</strong> have no corresponding table in the Reporting data model. All other tables are common to the Reporting and Reference data models.</p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="reporting-table-grid">
+<a class="reporting-table-card" href="Authority.html">
+<span class="reporting-table-title">Authority</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/Authority.png" alt="Authority">
+</span>
+</a>
+<a class="reporting-table-card" href="MeasurementStation.html">
+<span class="reporting-table-title">MeasurementStation</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/MeasurementStation.png" alt="MeasurementStation">
+</span>
+</a>
+<a class="reporting-table-card" href="SamplingPoint.html">
+<span class="reporting-table-title">SamplingPoint</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/SamplingPoint.png" alt="SamplingPoint">
+</span>
+</a>
+<a class="reporting-table-card" href="SamplingPointLocation.html">
+<span class="reporting-table-title">SamplingPointLocation</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/SamplingPointLocation.png" alt="SamplingPointLocation">
+</span>
+</a>
+<a class="reporting-table-card" href="SamplingProcess.html">
+<span class="reporting-table-title">SamplingProcess</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/SamplingProcess.png" alt="SamplingProcess">
+</span>
+</a>
+<a class="reporting-table-card" href="ModelObjectiveEstimation.html">
+<span class="reporting-table-title">ModelObjectiveEstimation</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/ModelObjectiveEstimation.png" alt="ModelObjectiveEstimation">
+</span>
+</a>
+<a class="reporting-table-card reference-only-table" href="ObservationMeasurementStatistics.html">
+<span class="reporting-table-title">ObservationMeasurementStatistics</span>
+<span class="reference-only-badge">REFERENCE ONLY</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/ObservationMeasurementStatistics.png" alt="ObservationMeasurementStatistics">
+</span>
+</a>
+<a class="reporting-table-card reference-only-table" href="ObservationMeasurementInventory.html">
+<span class="reporting-table-title">ObservationMeasurementInventory</span>
+<span class="reference-only-badge">REFERENCE ONLY</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/ObservationMeasurementInventory.png" alt="ObservationMeasurementInventory">
+</span>
+</a>
+<a class="reporting-table-card reference-only-table" href="MOEResultGrid.html">
+<span class="reporting-table-title">MOEResultGrid</span>
+<span class="reference-only-badge">REFERENCE ONLY</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/MOEResultGrid.png" alt="MOEResultGrid">
+</span>
+</a>
+<a class="reporting-table-card reference-only-table" href="MOEResultInventory.html">
+<span class="reporting-table-title">MOEResultInventory</span>
+<span class="reference-only-badge">REFERENCE ONLY</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/MOEResultInventory.png" alt="MOEResultInventory">
+</span>
+</a>
+<a class="reporting-table-card" href="ZoneGeometry.html">
+<span class="reporting-table-title">ZoneGeometry</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/ZoneGeometry.png" alt="ZoneGeometry">
+</span>
+</a>
+<a class="reporting-table-card reference-only-table" href="ZoneGeometryGrid.html">
+<span class="reporting-table-title">ZoneGeometryGrid</span>
+<span class="reference-only-badge">REFERENCE ONLY</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/ZoneGeometryGrid.png" alt="ZoneGeometryGrid">
+</span>
+</a>
+<a class="reporting-table-card" href="AssessmentRegimeZone.html">
+<span class="reporting-table-title">AssessmentRegimeZone</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/AssessmentRegimeZone.png" alt="AssessmentRegimeZone">
+</span>
+</a>
+<a class="reporting-table-card" href="ComplianceAssessmentMethod.html">
+<span class="reporting-table-title">ComplianceAssessmentMethod</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/ComplianceAssessmentMethod.png" alt="ComplianceAssessmentMethod">
+</span>
+</a>
+<a class="reporting-table-card" href="SpatialRepresentativeness.html">
+<span class="reporting-table-title">SpatialRepresentativeness</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/SpatialRepresentativeness.png" alt="SpatialRepresentativeness">
+</span>
+</a>
+<a class="reporting-table-card reference-only-table" href="SRSGrid.html">
+<span class="reporting-table-title">SRSGrid</span>
+<span class="reference-only-badge">REFERENCE ONLY</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/SRSGrid.png" alt="SRSGrid">
+</span>
+</a>
+<a class="reporting-table-card reference-only-table" href="SRSInventory.html">
+<span class="reporting-table-title">SRSInventory</span>
+<span class="reference-only-badge">REFERENCE ONLY</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/SRSInventory.png" alt="SRSInventory">
+</span>
+</a>
+<a class="reporting-table-card" href="PollutionLevelAdjustment.html">
+<span class="reporting-table-title">PollutionLevelAdjustment</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/PollutionLevelAdjustment.png" alt="PollutionLevelAdjustment">
+</span>
+</a>
+<a class="reporting-table-card" href="CompliancePlanLink.html">
+<span class="reporting-table-title">CompliancePlanLink</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/CompliancePlanLink.png" alt="CompliancePlanLink">
+</span>
+</a>
+<a class="reporting-table-card reference-only-table" href="Plan.html">
+<span class="reporting-table-title">Plan</span>
+<span class="reference-only-badge">REFERENCE ONLY</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/Plan.png" alt="Plan">
+</span>
+</a>
+<a class="reporting-table-card" href="PlanScenario.html">
+<span class="reporting-table-title">PlanScenario</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/PlanScenario.png" alt="PlanScenario">
+</span>
+</a>
+<a class="reporting-table-card" href="SourceApportionment.html">
+<span class="reporting-table-title">SourceApportionment</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/SourceApportionment.png" alt="SourceApportionment">
+</span>
+</a>
+<a class="reporting-table-card" href="ScenarioMeasure.html">
+<span class="reporting-table-title">ScenarioMeasure</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/ScenarioMeasure.png" alt="ScenarioMeasure">
+</span>
+</a>
+<a class="reporting-table-card" href="Measure.html">
+<span class="reporting-table-title">Measure</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/Measure.png" alt="Measure">
+</span>
+</a>
+<a class="reporting-table-card" href="Documentation.html">
+<span class="reporting-table-title">Documentation</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/Documentation.png" alt="Documentation">
+</span>
+</a>
+<a class="reporting-table-card" href="ObservationMeasurementResultPNSD.html">
+<span class="reporting-table-title">ObservationMeasurementResultPNSD</span>
+<span class="reporting-table-image">
+<img src="../_static/table-icons/ObservationMeasurementResultPNSD.png" alt="ObservationMeasurementResultPNSD">
+</span>
+</a>
+</div></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../diagram.html" class="btn btn-neutral float-left" title="Data model diagram" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Authority.html" class="btn btn-neutral float-right" title="Authority" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, EEA AQ Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

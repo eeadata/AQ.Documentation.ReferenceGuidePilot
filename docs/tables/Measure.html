@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Measure &mdash; AQ eReference Guide 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cf8c5278" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Documentation" href="Documentation.html" />
+    <link rel="prev" title="ScenarioMeasure" href="ScenarioMeasure.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AQ eReference Guide
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../diagram.html">Data model diagram</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tables</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Authority.html">Authority</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MeasurementStation.html">MeasurementStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SamplingPoint.html">SamplingPoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SamplingPointLocation.html">SamplingPointLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SamplingProcess.html">SamplingProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelObjectiveEstimation.html">ModelObjectiveEstimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObservationMeasurementStatistics.html">ObservationMeasurementStatistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObservationMeasurementInventory.html">ObservationMeasurementInventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MOEResultGrid.html">MOEResultGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MOEResultInventory.html">MOEResultInventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ZoneGeometry.html">ZoneGeometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ZoneGeometryGrid.html">ZoneGeometryGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssessmentRegimeZone.html">AssessmentRegimeZone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ComplianceAssessmentMethod.html">ComplianceAssessmentMethod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpatialRepresentativeness.html">SpatialRepresentativeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SRSGrid.html">SRSGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SRSInventory.html">SRSInventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PollutionLevelAdjustment.html">PollutionLevelAdjustment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CompliancePlanLink.html">CompliancePlanLink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plan.html">Plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlanScenario.html">PlanScenario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SourceApportionment.html">SourceApportionment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ScenarioMeasure.html">ScenarioMeasure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Measure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObservationMeasurementResultPNSD.html">ObservationMeasurementResultPNSD</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AQ eReference Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tables</a></li>
+      <li class="breadcrumb-item active">Measure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tables/Measure.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="measure">
+<h1>Measure<a class="headerlink" href="#measure" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="../_images/Measure.png"><img alt="Measure" class="align-right" src="../_images/Measure.png" style="width: 200px;" />
+</a>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#attributes" id="id1">Attributes</a></p></li>
+<li><p><a class="reference internal" href="#attribute-details" id="id2">Attribute details</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mea-01-countrycode" id="id3">MEA_01 - CountryCode</a></p></li>
+<li><p><a class="reference internal" href="#mea-02-measuregroupid" id="id4">MEA_02 - MeasureGroupId</a></p></li>
+<li><p><a class="reference internal" href="#mea-03-measureid" id="id5">MEA_03 - MeasureId</a></p></li>
+<li><p><a class="reference internal" href="#mea-20-reportingtime" id="id6">MEA_20 - ReportingTime</a></p></li>
+<li><p><a class="reference internal" href="#mea-04-measurenationalcode" id="id7">MEA_04 - MeasureNationalCode</a></p></li>
+<li><p><a class="reference internal" href="#mea-05-measurename" id="id8">MEA_05 - MeasureName</a></p></li>
+<li><p><a class="reference internal" href="#mea-06-measureclassification" id="id9">MEA_06 - MeasureClassification</a></p></li>
+<li><p><a class="reference internal" href="#mea-07-measuretype" id="id10">MEA_07 - MeasureType</a></p></li>
+<li><p><a class="reference internal" href="#mea-08-sourcesector" id="id11">MEA_08 - SourceSector</a></p></li>
+<li><p><a class="reference internal" href="#mea-09-spatialscale" id="id12">MEA_09 - SpatialScale</a></p></li>
+<li><p><a class="reference internal" href="#mea-10-implementationbegin" id="id13">MEA_10 - ImplementationBegin</a></p></li>
+<li><p><a class="reference internal" href="#mea-11-implementationend" id="id14">MEA_11 - ImplementationEnd</a></p></li>
+<li><p><a class="reference internal" href="#mea-12-measurecost" id="id15">MEA_12 - MeasureCost</a></p></li>
+<li><p><a class="reference internal" href="#mea-13-fulleffectdate" id="id16">MEA_13 - FullEffectDate</a></p></li>
+<li><p><a class="reference internal" href="#mea-14-measurestatus" id="id17">MEA_14 - MeasureStatus</a></p></li>
+<li><p><a class="reference internal" href="#mea-15-reasonifmeasurenotused" id="id18">MEA_15 - ReasonIfMeasureNotUsed</a></p></li>
+<li><p><a class="reference internal" href="#mea-16-deletion" id="id19">MEA_16 - Deletion</a></p></li>
+<li><p><a class="reference internal" href="#mea-21-country" id="id20">MEA_21 - Country</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="attributes">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Attributes</a><a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute Code</p></th>
+<th class="head"><p>Attribute Name</p></th>
+<th class="head"><p>SQL DB Data Type</p></th>
+<th class="head"><p>ReportNet3 Data Type</p></th>
+<th class="head"><p>Properties</p></th>
+<th class="head"><p>Code list</p></th>
+<th class="head"><p>Related table(s)</p></th>
+<th class="head text-center"><p>In Reporting</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MEA_01</p></td>
+<td><p>CountryCode</p></td>
+<td><p>varchar(2)</p></td>
+<td><p>string</p></td>
+<td><p>PK</p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/common/countries">countries</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MEA_02</p></td>
+<td><p>MeasureGroupId</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p>PK</p></td>
+<td><p></p></td>
+<td><p>ScenarioMeasure</p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>MEA_03</p></td>
+<td><p>MeasureId</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p>PK</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MEA_20</p></td>
+<td><p>ReportingTime</p></td>
+<td><p>datetime</p></td>
+<td><p>datetime</p></td>
+<td><p>PK</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>MEA_04</p></td>
+<td><p>MeasureNationalCode</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MEA_05</p></td>
+<td><p>MeasureName</p></td>
+<td><p>varchar(150)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>MEA_06</p></td>
+<td><p>MeasureClassification</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/measureclassification/view">measureclassification</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MEA_07</p></td>
+<td><p>MeasureType</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/measuretype/view">measuretype</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>MEA_08</p></td>
+<td><p>SourceSector</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/sourcesectors/view">sourcesectors</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MEA_09</p></td>
+<td><p>SpatialScale</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/spatialscale/view">spatialscale</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>MEA_10</p></td>
+<td><p>ImplementationBegin</p></td>
+<td><p>date</p></td>
+<td><p>datetime</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MEA_11</p></td>
+<td><p>ImplementationEnd</p></td>
+<td><p>date</p></td>
+<td><p>datetime</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>MEA_12</p></td>
+<td><p>MeasureCost</p></td>
+<td><p>decimal(18,2)</p></td>
+<td><p>numeric</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MEA_13</p></td>
+<td><p>FullEffectDate</p></td>
+<td><p>date</p></td>
+<td><p>datetime</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>MEA_14</p></td>
+<td><p>MeasureStatus</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/measureimplementationstatus/view">measureimplementationstatus</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MEA_15</p></td>
+<td><p>ReasonIfMeasureNotUsed</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/reasonifmeasurenotused">reasonifmeasurenotused</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>MEA_16</p></td>
+<td><p>Deletion</p></td>
+<td><p>bit</p></td>
+<td><p>boolean</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>MEA_21</p></td>
+<td><p>Country</p></td>
+<td><p>varchar(20)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>N</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">ReportingTime</span></code> and <code class="docutils literal notranslate"><span class="pre">Country</span></code> are Reference attributes without a corresponding attribute in the reporting data model.</p>
+</div>
+</section>
+<section id="attribute-details">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Attribute details</a><a class="headerlink" href="#attribute-details" title="Link to this heading"></a></h2>
+<section id="mea-01-countrycode">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">MEA_01 - CountryCode</a><a class="headerlink" href="#mea-01-countrycode" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Country or territory ISO2 code.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-02-measuregroupid">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">MEA_02 - MeasureGroupId</a><a class="headerlink" href="#mea-02-measuregroupid" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Identifier of the pollution reduction for measure group, given by data provider.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-03-measureid">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">MEA_03 - MeasureId</a><a class="headerlink" href="#mea-03-measureid" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Identifier of the pollution reduction measure, given by data provider.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-20-reportingtime">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">MEA_20 - ReportingTime</a><a class="headerlink" href="#mea-20-reportingtime" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Date and time when the information is submitted.</p>
+<p><strong>In Reporting</strong></p>
+<p>N - No corresponding reporting attribute.</p>
+</section>
+<section id="mea-04-measurenationalcode">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">MEA_04 - MeasureNationalCode</a><a class="headerlink" href="#mea-04-measurenationalcode" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Unique local code assigned to the measure by the data provider.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-05-measurename">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">MEA_05 - MeasureName</a><a class="headerlink" href="#mea-05-measurename" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Name or title of the pollution reduction measure.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-06-measureclassification">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">MEA_06 - MeasureClassification</a><a class="headerlink" href="#mea-06-measureclassification" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Classification of the measure based on regulatory categories.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-07-measuretype">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">MEA_07 - MeasureType</a><a class="headerlink" href="#mea-07-measuretype" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Description of the high-level implementation mechanism or scope of the measure.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-08-sourcesector">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">MEA_08 - SourceSector</a><a class="headerlink" href="#mea-08-sourcesector" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Economic or activity sector targeted by the measure (e.g., transport, energy, industry).</p>
+<p><strong>Remarks</strong></p>
+<p>It can be tested against the SourceSector of SourceApportionment which was used as base for corresponding ScenarioId.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-09-spatialscale">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">MEA_09 - SpatialScale</a><a class="headerlink" href="#mea-09-spatialscale" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Geographical coverage of the measure (e.g., local, national, EU-wide).</p>
+<p><strong>Remarks</strong></p>
+<p>It can be tested against the SpatialScale of SourceApportionment which was used as base for corresponding ScenarioId.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-10-implementationbegin">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">MEA_10 - ImplementationBegin</a><a class="headerlink" href="#mea-10-implementationbegin" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Start date for implementing the measure.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-11-implementationend">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">MEA_11 - ImplementationEnd</a><a class="headerlink" href="#mea-11-implementationend" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>End date for implementing the measure.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-12-measurecost">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">MEA_12 - MeasureCost</a><a class="headerlink" href="#mea-12-measurecost" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Estimated costs for implementing the measure over its lifetime.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-13-fulleffectdate">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">MEA_13 - FullEffectDate</a><a class="headerlink" href="#mea-13-fulleffectdate" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Date when the measure is expected to reach its full impact.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-14-measurestatus">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">MEA_14 - MeasureStatus</a><a class="headerlink" href="#mea-14-measurestatus" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Current status of the measure (e.g., planned, in progress, completed).</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-15-reasonifmeasurenotused">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">MEA_15 - ReasonIfMeasureNotUsed</a><a class="headerlink" href="#mea-15-reasonifmeasurenotused" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Explanation or justification if the measure was not implemented.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-16-deletion">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">MEA_16 - Deletion</a><a class="headerlink" href="#mea-16-deletion" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Flag to indicate that this element must be deleted.</p>
+<p><strong>Remarks</strong></p>
+<p>Y/N</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="mea-21-country">
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">MEA_21 - Country</a><a class="headerlink" href="#mea-21-country" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Name of the country.</p>
+<p><strong>In Reporting</strong></p>
+<p>N - No corresponding reporting attribute.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ScenarioMeasure.html" class="btn btn-neutral float-left" title="ScenarioMeasure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Documentation.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, EEA AQ Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

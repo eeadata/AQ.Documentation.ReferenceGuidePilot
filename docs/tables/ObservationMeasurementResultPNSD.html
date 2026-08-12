@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ObservationMeasurementResultPNSD &mdash; AQ eReference Guide 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cf8c5278" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Documentation" href="Documentation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AQ eReference Guide
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../diagram.html">Data model diagram</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tables</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Authority.html">Authority</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MeasurementStation.html">MeasurementStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SamplingPoint.html">SamplingPoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SamplingPointLocation.html">SamplingPointLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SamplingProcess.html">SamplingProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelObjectiveEstimation.html">ModelObjectiveEstimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObservationMeasurementStatistics.html">ObservationMeasurementStatistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObservationMeasurementInventory.html">ObservationMeasurementInventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MOEResultGrid.html">MOEResultGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MOEResultInventory.html">MOEResultInventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ZoneGeometry.html">ZoneGeometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ZoneGeometryGrid.html">ZoneGeometryGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssessmentRegimeZone.html">AssessmentRegimeZone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ComplianceAssessmentMethod.html">ComplianceAssessmentMethod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpatialRepresentativeness.html">SpatialRepresentativeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SRSGrid.html">SRSGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SRSInventory.html">SRSInventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PollutionLevelAdjustment.html">PollutionLevelAdjustment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CompliancePlanLink.html">CompliancePlanLink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plan.html">Plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlanScenario.html">PlanScenario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SourceApportionment.html">SourceApportionment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ScenarioMeasure.html">ScenarioMeasure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Measure.html">Measure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Documentation.html">Documentation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ObservationMeasurementResultPNSD</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AQ eReference Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tables</a></li>
+      <li class="breadcrumb-item active">ObservationMeasurementResultPNSD</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tables/ObservationMeasurementResultPNSD.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="observationmeasurementresultpnsd">
+<h1>ObservationMeasurementResultPNSD<a class="headerlink" href="#observationmeasurementresultpnsd" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="../_images/ObservationMeasurementResultPNSD.png"><img alt="ObservationMeasurementResultPNSD" class="align-right" src="../_images/ObservationMeasurementResultPNSD.png" style="width: 200px;" />
+</a>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#attributes" id="id1">Attributes</a></p></li>
+<li><p><a class="reference internal" href="#attribute-details" id="id2">Attribute details</a></p>
+<ul>
+<li><p><a class="reference internal" href="#omp-01-countrycode" id="id3">OMP_01 - CountryCode</a></p></li>
+<li><p><a class="reference internal" href="#omp-02-assessmentmethodid" id="id4">OMP_02 - AssessmentMethodId</a></p></li>
+<li><p><a class="reference internal" href="#omp-03-start" id="id5">OMP_03 - Start</a></p></li>
+<li><p><a class="reference internal" href="#omp-04-lowerrange" id="id6">OMP_04 - LowerRange</a></p></li>
+<li><p><a class="reference internal" href="#omp-05-pollutantid" id="id7">OMP_05 - PollutantId</a></p></li>
+<li><p><a class="reference internal" href="#omp-06-end" id="id8">OMP_06 - End</a></p></li>
+<li><p><a class="reference internal" href="#omp-07-value" id="id9">OMP_07 - Value</a></p></li>
+<li><p><a class="reference internal" href="#omp-08-unit" id="id10">OMP_08 - Unit</a></p></li>
+<li><p><a class="reference internal" href="#omp-09-validity" id="id11">OMP_09 - Validity</a></p></li>
+<li><p><a class="reference internal" href="#omp-10-verification" id="id12">OMP_10 - Verification</a></p></li>
+<li><p><a class="reference internal" href="#omp-11-timeresolution" id="id13">OMP_11 - TimeResolution</a></p></li>
+<li><p><a class="reference internal" href="#omp-12-resulttime" id="id14">OMP_12 - ResultTime</a></p></li>
+<li><p><a class="reference internal" href="#omp-13-upperrange" id="id15">OMP_13 - UpperRange</a></p></li>
+<li><p><a class="reference internal" href="#omp-14-temperature" id="id16">OMP_14 - Temperature</a></p></li>
+<li><p><a class="reference internal" href="#omp-15-relativehumidity" id="id17">OMP_15 - RelativeHumidity</a></p></li>
+<li><p><a class="reference internal" href="#omp-16-pressure" id="id18">OMP_16 - Pressure</a></p></li>
+<li><p><a class="reference internal" href="#omp-17-inversion" id="id19">OMP_17 - Inversion</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="attributes">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Attributes</a><a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute Code</p></th>
+<th class="head"><p>Attribute Name</p></th>
+<th class="head"><p>SQL DB Data Type</p></th>
+<th class="head"><p>ReportNet3 Data Type</p></th>
+<th class="head"><p>Properties</p></th>
+<th class="head"><p>Code list</p></th>
+<th class="head"><p>Related table(s)</p></th>
+<th class="head text-center"><p>In Reporting</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>OMP_01</p></td>
+<td><p>CountryCode</p></td>
+<td><p>varchar(2)</p></td>
+<td><p>string</p></td>
+<td><p>PK</p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/common/countries">countries</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>OMP_02</p></td>
+<td><p>AssessmentMethodId</p></td>
+<td><p>varchar(50)</p></td>
+<td><p>string</p></td>
+<td><p>PK</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>OMP_03</p></td>
+<td><p>Start</p></td>
+<td><p>datetime</p></td>
+<td><p>datetime</p></td>
+<td><p>PK</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>OMP_04</p></td>
+<td><p>LowerRange</p></td>
+<td><p>int</p></td>
+<td><p>numeric</p></td>
+<td><p>PK</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>OMP_05</p></td>
+<td><p>PollutantId</p></td>
+<td><p>int</p></td>
+<td><p>numeric</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view">pollutant</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>OMP_06</p></td>
+<td><p>End</p></td>
+<td><p>datetime</p></td>
+<td><p>datetime</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>OMP_07</p></td>
+<td><p>Value</p></td>
+<td><p>decimal(10,2)</p></td>
+<td><p>numeric</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>OMP_08</p></td>
+<td><p>Unit</p></td>
+<td><p>varchar(10)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/uom/concentration/">concentration</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>OMP_09</p></td>
+<td><p>Validity</p></td>
+<td><p>int</p></td>
+<td><p>numeric</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/observationvalidity/view">observationvalidity</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>OMP_10</p></td>
+<td><p>Verification</p></td>
+<td><p>int</p></td>
+<td><p>numeric</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/observationverification/view">observationverification</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>OMP_11</p></td>
+<td><p>TimeResolution</p></td>
+<td><p>varchar(10)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/primaryObservation/view">primaryObservation</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>OMP_12</p></td>
+<td><p>ResultTime</p></td>
+<td><p>datetime</p></td>
+<td><p>datetime</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>OMP_13</p></td>
+<td><p>UpperRange</p></td>
+<td><p>int</p></td>
+<td><p>numeric</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>OMP_14</p></td>
+<td><p>Temperature</p></td>
+<td><p>decimal(5,2)</p></td>
+<td><p>numeric</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>OMP_15</p></td>
+<td><p>RelativeHumidity</p></td>
+<td><p>decimal(5,2)</p></td>
+<td><p>numeric</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>OMP_16</p></td>
+<td><p>Pressure</p></td>
+<td><p>decimal(5,2)</p></td>
+<td><p>numeric</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>OMP_17</p></td>
+<td><p>Inversion</p></td>
+<td><p>varchar(20)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://dd.eionet.europa.eu/vocabulary/aq/PNSDinversion">PNSDinversion</a></p></td>
+<td><p></p></td>
+<td class="text-center"><p>Y</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attribute-details">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Attribute details</a><a class="headerlink" href="#attribute-details" title="Link to this heading"></a></h2>
+<section id="omp-01-countrycode">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">OMP_01 - CountryCode</a><a class="headerlink" href="#omp-01-countrycode" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Country or territory ISO2 code.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-02-assessmentmethodid">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">OMP_02 - AssessmentMethodId</a><a class="headerlink" href="#omp-02-assessmentmethodid" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Identifier of the assessment method (sampling point), given by data provider.</p>
+<p><strong>Remarks</strong></p>
+<p>It will be cross-checked against the SamplingPoint table.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-03-start">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">OMP_03 - Start</a><a class="headerlink" href="#omp-03-start" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Start date and time of the measurement period.</p>
+<p><strong>Remarks</strong></p>
+<p>Start must be provided with time zone information.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-04-lowerrange">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">OMP_04 - LowerRange</a><a class="headerlink" href="#omp-04-lowerrange" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Lower range of PNSD bin.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-05-pollutantid">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">OMP_05 - PollutantId</a><a class="headerlink" href="#omp-05-pollutantid" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Code of the air pollutant being measured, as per Data Dictionary standards.</p>
+<p><strong>Remarks</strong></p>
+<p>End must be provided with time zone information.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-06-end">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">OMP_06 - End</a><a class="headerlink" href="#omp-06-end" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>End date and time of the measurement period.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-07-value">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">OMP_07 - Value</a><a class="headerlink" href="#omp-07-value" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Measured concentration or level of the air pollutant.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-08-unit">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">OMP_08 - Unit</a><a class="headerlink" href="#omp-08-unit" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Unit of measurement for the air pollution level (e.g., µg/m³).</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-09-validity">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">OMP_09 - Validity</a><a class="headerlink" href="#omp-09-validity" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Indicator of whether the measurement data is valid or not.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-10-verification">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">OMP_10 - Verification</a><a class="headerlink" href="#omp-10-verification" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Information based on verification flags found in reported time series.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-11-timeresolution">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">OMP_11 - TimeResolution</a><a class="headerlink" href="#omp-11-timeresolution" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Time resolution of the reported measurement observations (e.g., hourly, daily).</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-12-resulttime">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">OMP_12 - ResultTime</a><a class="headerlink" href="#omp-12-resulttime" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Time at which the result was generated or recorded.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-13-upperrange">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">OMP_13 - UpperRange</a><a class="headerlink" href="#omp-13-upperrange" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Upper range of PNSD bin.</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-14-temperature">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">OMP_14 - Temperature</a><a class="headerlink" href="#omp-14-temperature" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Temperature measured along tihe PNSD (deg Celsius).</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-15-relativehumidity">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">OMP_15 - RelativeHumidity</a><a class="headerlink" href="#omp-15-relativehumidity" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Relative humidity measured along tihe PNSD (%).</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-16-pressure">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">OMP_16 - Pressure</a><a class="headerlink" href="#omp-16-pressure" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Pressure measured along tihe PNSD (hPa).</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+<section id="omp-17-inversion">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">OMP_17 - Inversion</a><a class="headerlink" href="#omp-17-inversion" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>Inversion method used by country (code list flag).</p>
+<p><strong>In Reporting</strong></p>
+<p>Y</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Documentation.html" class="btn btn-neutral float-left" title="Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, EEA AQ Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Local Sphinx build
+build/
+
+# Sphinx temporary publication files
+docs/.doctrees/
+
+# macOS metadata
+.DS_Store
+__MACOSX/
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# Local Python environments
+.venv/
+venv/
