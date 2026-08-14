@@ -6,7 +6,7 @@ EXPECTED_BRANCH="main"
 PILOT_REMOTE="origin"
 PILOT_REPO="MIH-aqteam/AQ_Reference_Guide_Pilot"
 EEA_REMOTE="eea"
-EEA_REPO="eeadata/AQ.Documentation.ReferenceGuide"
+EEA_REPO="eeadata/AQ.Documentation.ReferenceGuidePilot"
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 CHECK_DIR="$SCRIPT_DIR/build/eea-check"
 
@@ -222,7 +222,7 @@ echo "EEA PUBLICATION COMPLETED SUCCESSFULLY"
 echo "============================================================"
 echo
 echo "Repository: https://github.com/$EEA_REPO"
-echo "Website   : https://eeadata.github.io/AQ.Documentation.ReferenceGuide/"
+echo "Website   : https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/"
 echo
 echo "For the first publication, configure GitHub Pages to use:"
 echo "  Source: Deploy from a branch"
