@@ -15,12 +15,12 @@
 
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) | In Reporting |
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
-| SRS_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | Y |
-| SRS_02 | SRSId | varchar(50) | string | PK |  | ComplianceAssessmentMethod | Y |
-| SRS_03 | SRSApplicationId | varchar(50) | string | PK |  | SRSInline<br>SRSExternal | Y |
-| SRS_04 | SRSApplication | varchar(50) | string |  | [SRapplication](https://dd.eionet.europa.eu/vocabulary/aq/SRapplication) |  | Y |
-| SRS_05 | ResultEncoding | varchar(10) | string |  | [resultencoding](https://dd.eionet.europa.eu/vocabulary/aq/resultencoding/view) |  | Y |
-| SRS_06 | RepresentativenessAssessmentMethodId | varchar(50) | string |  |  | ModelObjectiveEstimation | Y |
+| SRS_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SpatialRepresentativeness.html#srs-01-countrycode) |
+| SRS_02 | SRSId | varchar(50) | string | PK |  | ComplianceAssessmentMethod | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SpatialRepresentativeness.html#srs-02-srsid) |
+| SRS_03 | SRSApplicationId | varchar(50) | string | PK |  | SRSInline<br>SRSExternal | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SpatialRepresentativeness.html#srs-03-srsapplicationid) |
+| SRS_04 | SRSApplication | varchar(50) | string |  | [SRapplication](https://dd.eionet.europa.eu/vocabulary/aq/SRapplication) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SpatialRepresentativeness.html#srs-04-srsapplication) |
+| SRS_05 | ResultEncoding | varchar(10) | string |  | [resultencoding](https://dd.eionet.europa.eu/vocabulary/aq/resultencoding/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SpatialRepresentativeness.html#srs-05-resultencoding) |
+| SRS_06 | RepresentativenessAssessmentMethodId | varchar(50) | string |  |  | ModelObjectiveEstimation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SpatialRepresentativeness.html#srs-06-representativenessassessmentmethodid) |
 | SRS_07 | Country | varchar(20) | string |  |  |  | N |
 | SRS_08 | Deletion | bit | boolean |  |  |  | N |
 
@@ -38,7 +38,7 @@ Country or territory ISO2 code.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SpatialRepresentativeness.html#srs-01-countrycode)
 
 ### SRS_02 - SRSId
 
@@ -48,7 +48,7 @@ Identifier of the area representing the sampling point's measurement spatial cov
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SpatialRepresentativeness.html#srs-02-srsid)
 
 ### SRS_03 - SRSApplicationId
 
@@ -62,7 +62,7 @@ The same SRSId can have several SRSApplication_Id (e.g. one for the SPO represen
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SpatialRepresentativeness.html#srs-03-srsapplicationid)
 
 ### SRS_04 - SRSApplication
 
@@ -76,7 +76,7 @@ New code list (SPO representativeness area, exceedance extent area).
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SpatialRepresentativeness.html#srs-04-srsapplication)
 
 ### SRS_05 - ResultEncoding
 
@@ -86,7 +86,7 @@ Encoding method used for model results ('internal' or 'external').
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SpatialRepresentativeness.html#srs-05-resultencoding)
 
 ### SRS_06 - RepresentativenessAssessmentMethodId
 
@@ -100,7 +100,7 @@ AssessmentMethodId is a model or OBE identifier that points to the method (model
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SpatialRepresentativeness.html#srs-06-representativenessassessmentmethodid)
 
 ### SRS_07 - Country
 

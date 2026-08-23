@@ -15,11 +15,11 @@
 
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) | In Reporting |
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
-| SPO_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | Y |
-| SPO_02 | AssessmentMethodId | varchar(50) | string | PK |  | ComplianceAssessmentMethod<br>SamplingProcess<br>SamplingPointLocation<br>ObservationMeasurementResult | Y |
-| SPO_03 | SamplingPointReferenceId | varchar(32) | string |  |  |  | Y |
-| SPO_04 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  | Y |
-| SPO_05 | StationEoICode | varchar(10) | string |  |  | MeasurementStation | Y |
+| SPO_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPoint.html#spo-01-countrycode) |
+| SPO_02 | AssessmentMethodId | varchar(50) | string | PK |  | ComplianceAssessmentMethod<br>SamplingProcess<br>SamplingPointLocation<br>ObservationMeasurementResult | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPoint.html#spo-02-assessmentmethodid) |
+| SPO_03 | SamplingPointReferenceId | varchar(32) | string |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPoint.html#spo-03-samplingpointreferenceid) |
+| SPO_04 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPoint.html#spo-04-pollutantid) |
+| SPO_05 | StationEoICode | varchar(10) | string |  |  | MeasurementStation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPoint.html#spo-05-stationeoicode) |
 | SPO_06 | Country | varchar(20) | string |  |  |  | N |
 | SPO_07 | SamplingPointStatus | bit | boolean |  |  |  | N |
 | SPO_08 | Pollutant | varchar(50) | string |  |  |  | N |
@@ -39,7 +39,7 @@ Country or territory ISO2 code.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPoint.html#spo-01-countrycode)
 
 ### SPO_02 - AssessmentMethodId
 
@@ -55,7 +55,7 @@ The same sampling point (AssessmentMethodId) can be re-open (also with the same 
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPoint.html#spo-02-assessmentmethodid)
 
 ### SPO_03 - SamplingPointReferenceId
 
@@ -69,7 +69,7 @@ Following rules of SPO reference code, unique within CountryCode reported and it
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPoint.html#spo-03-samplingpointreferenceid)
 
 ### SPO_04 - PollutantId
 
@@ -83,7 +83,7 @@ Only one for the same AssessmentMethodId/SamplingPointReferenceId.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPoint.html#spo-04-pollutantid)
 
 ### SPO_05 - StationEoICode
 
@@ -107,7 +107,7 @@ It will be cross-checked against Station table.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPoint.html#spo-05-stationeoicode)
 
 ### SPO_06 - Country
 

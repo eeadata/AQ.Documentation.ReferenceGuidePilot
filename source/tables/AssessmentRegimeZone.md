@@ -15,25 +15,25 @@
 
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) | In Reporting |
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
-| ARZ_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | Y |
-| ARZ_02 | AssessmentRegimeId | varchar(50) | string | PK |  | ComplianceAssessmentMethod | Y |
-| ARZ_03 | ZoneId | varchar(50) | string |  |  | ZoneGeometry | Y |
-| ARZ_04 | ZoneNationalCode | varchar(50) | string |  |  |  | Y |
-| ARZ_05 | ZoneArea | decimal(10,2) | numeric |  |  |  | Y |
-| ARZ_06 | ZoneCategory | varchar(20) | string |  | [zonecategory](https://dd.eionet.europa.eu/vocabulary/aq/zonecategory/view) |  | Y |
-| ARZ_07 | ZoneType | varchar(20) | string |  | [zonetype](https://dd.eionet.europa.eu/vocabulary/aq/zonetype/view) |  | Y |
-| ARZ_08 | ZoneName | varchar(150) | string |  |  |  | Y |
-| ARZ_09 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  | Y |
-| ARZ_10 | ProtectionTarget | varchar(50) | string |  | [protectiontarget](https://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/view) |  | Y |
-| ARZ_11 | ObjectiveType | varchar(50) | string |  | [objectivetype](https://dd.eionet.europa.eu/vocabulary/aq/objectivetype/view) |  | Y |
-| ARZ_12 | ReportingMetric | varchar(50) | string |  | [reportingmetric](https://dd.eionet.europa.eu/vocabulary/aq/reportingmetric/view) |  | Y |
-| ARZ_13 | AssessmentThresholdExceedance | varchar(20) | string |  | [assessmentthresholdexceedance](https://dd.eionet.europa.eu/vocabulary/aq/assessmentthresholdexceedance/view) |  | Y |
-| ARZ_14 | PostponementYear | int | numeric |  |  |  | Y |
-| ARZ_15 | FixedMeasurementReduction | bit | boolean |  |  |  | Y |
-| ARZ_16 | ZoneResidentPopulationYear | int | numeric |  |  |  | Y |
-| ARZ_17 | ZoneResidentPopulation | int | numeric |  |  |  | Y |
-| ARZ_18 | ClassificationYear | int | numeric |  |  |  | Y |
-| ARZ_19 | ClassificationDocumentId | varchar(150) | string |  |  | Documentation | Y |
+| ARZ_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-01-countrycode) |
+| ARZ_02 | AssessmentRegimeId | varchar(50) | string | PK |  | ComplianceAssessmentMethod | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-02-assessmentregimeid) |
+| ARZ_03 | ZoneId | varchar(50) | string |  |  | ZoneGeometry | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-03-zoneid) |
+| ARZ_04 | ZoneNationalCode | varchar(50) | string |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-04-zonenationalcode) |
+| ARZ_05 | ZoneArea | decimal(10,2) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-05-zonearea) |
+| ARZ_06 | ZoneCategory | varchar(20) | string |  | [zonecategory](https://dd.eionet.europa.eu/vocabulary/aq/zonecategory/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-06-zonecategory) |
+| ARZ_07 | ZoneType | varchar(20) | string |  | [zonetype](https://dd.eionet.europa.eu/vocabulary/aq/zonetype/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-07-zonetype) |
+| ARZ_08 | ZoneName | varchar(150) | string |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-08-zonename) |
+| ARZ_09 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-09-pollutantid) |
+| ARZ_10 | ProtectionTarget | varchar(50) | string |  | [protectiontarget](https://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-10-protectiontarget) |
+| ARZ_11 | ObjectiveType | varchar(50) | string |  | [objectivetype](https://dd.eionet.europa.eu/vocabulary/aq/objectivetype/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-11-objectivetype) |
+| ARZ_12 | ReportingMetric | varchar(50) | string |  | [reportingmetric](https://dd.eionet.europa.eu/vocabulary/aq/reportingmetric/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-12-reportingmetric) |
+| ARZ_13 | AssessmentThresholdExceedance | varchar(20) | string |  | [assessmentthresholdexceedance](https://dd.eionet.europa.eu/vocabulary/aq/assessmentthresholdexceedance/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-13-assessmentthresholdexceedance) |
+| ARZ_14 | PostponementYear | int | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-14-postponementyear) |
+| ARZ_15 | FixedMeasurementReduction | bit | boolean |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-15-fixedmeasurementreduction) |
+| ARZ_16 | ZoneResidentPopulationYear | int | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-16-zoneresidentpopulationyear) |
+| ARZ_17 | ZoneResidentPopulation | int | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-17-zoneresidentpopulation) |
+| ARZ_18 | ClassificationYear | int | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-18-classificationyear) |
+| ARZ_19 | ClassificationDocumentId | varchar(150) | string |  |  | Documentation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-19-classificationdocumentid) |
 | ARZ_20 | Country | varchar(20) | string |  |  |  | N |
 | ARZ_21 | ReportingYear | int | numeric |  |  |  | N |
 | ARZ_22 | Pollutant | varchar(50) | string |  |  |  | N |
@@ -68,7 +68,7 @@ Country or territory ISO2 code.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-01-countrycode)
 
 ### ARZ_02 - AssessmentRegimeId
 
@@ -78,7 +78,7 @@ Identifier of the air quality assessment regime, given by data provider.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-02-assessmentregimeid)
 
 ### ARZ_03 - ZoneId
 
@@ -92,7 +92,7 @@ It will be cross-checked against the ZoneGeometry table.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-03-zoneid)
 
 ### ARZ_04 - ZoneNationalCode
 
@@ -102,7 +102,7 @@ Unique identifier of the air quality zone, given by data provider.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-04-zonenationalcode)
 
 ### ARZ_05 - ZoneArea
 
@@ -112,7 +112,7 @@ Total area of the air quality zone.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-05-zonearea)
 
 ### ARZ_06 - ZoneCategory
 
@@ -122,7 +122,7 @@ Category of the air quality zone (aq zone or nuts) - new code list
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-06-zonecategory)
 
 ### ARZ_07 - ZoneType
 
@@ -132,7 +132,7 @@ Type of air quality zone (e.g., agglomeration and non-agglomeration).
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-07-zonetype)
 
 ### ARZ_08 - ZoneName
 
@@ -142,7 +142,7 @@ Geographical name of the air quality zone.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-08-zonename)
 
 ### ARZ_09 - PollutantId
 
@@ -152,7 +152,7 @@ Code of the air pollutant for which the assessment is being conducted.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-09-pollutantid)
 
 ### ARZ_10 - ProtectionTarget
 
@@ -162,7 +162,7 @@ Protection target for air quality (e.g., human health, vegetation).
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-10-protectiontarget)
 
 ### ARZ_11 - ObjectiveType
 
@@ -172,7 +172,7 @@ Type of environmental objective related to air quality assessment.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-11-objectivetype)
 
 ### ARZ_12 - ReportingMetric
 
@@ -182,7 +182,7 @@ Metric corresponding to the standard (objective type)
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-12-reportingmetric)
 
 ### ARZ_13 - AssessmentThresholdExceedance
 
@@ -192,7 +192,7 @@ Status indicating whether an assessment threshold has been exceeded.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-13-assessmentthresholdexceedance)
 
 ### ARZ_14 - PostponementYear
 
@@ -207,7 +207,7 @@ Leaving this attribute blank will mean that no postponement does apply.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-14-postponementyear)
 
 ### ARZ_15 - FixedMeasurementReduction
 
@@ -223,7 +223,7 @@ FixedSPOReduction relates to the reduction of the number of sampling points for 
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-15-fixedmeasurementreduction)
 
 ### ARZ_16 - ZoneResidentPopulationYear
 
@@ -233,7 +233,7 @@ Reference year for the resident population data in the zone.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-16-zoneresidentpopulationyear)
 
 ### ARZ_17 - ZoneResidentPopulation
 
@@ -243,7 +243,7 @@ Number of people residing within the air quality zone.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-17-zoneresidentpopulation)
 
 ### ARZ_18 - ClassificationYear
 
@@ -253,7 +253,7 @@ The year of the last classification of the pollution level in the zone.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-18-classificationyear)
 
 ### ARZ_19 - ClassificationDocumentId
 
@@ -263,7 +263,7 @@ Identifier of the report detailing the classification procedure given by data pr
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/AssessmentRegimeZone.html#arz-19-classificationdocumentid)
 
 ### ARZ_20 - Country
 

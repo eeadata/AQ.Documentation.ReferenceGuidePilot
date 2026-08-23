@@ -15,25 +15,25 @@
 
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) | In Reporting |
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
-| CAM_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | Y |
-| CAM_03 | AssessmentRegimeId | varchar(50) | string | PK |  | AssessmentRegimeZone | Y |
-| CAM_04 | DataAggregationProcessId | varchar(50) | string | PK | [aggregationprocess](https://dd.eionet.europa.eu/vocabulary/aq/aggregationprocess/view) |  | Y |
-| CAM_05 | AssessmentMethodId | varchar(50) | string | PK |  | SamplingPoint<br>SamplingProcess<br>SamplingPointLocation<br>ObservationMeasurementResult<br>ModelObjectiveEstimation<br>MOEResultInline<br>MOEResultExternal | Y |
-| CAM_02 | ReportingYear | int | numeric | PK |  |  | Y |
-| CAM_15 | AttainmentId | varchar(50) | string |  |  | CompliancePlanLink<br>PollutionLevelAdjustment | Y |
-| CAM_06 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  | Y |
-| CAM_07 | AssessmentType | varchar(50) | string |  | [assessmenttype](https://dd.eionet.europa.eu/vocabulary/aq/assessmenttype/view) |  | Y |
-| CAM_08 | IsExceedance | varchar(5) | string |  |  |  | Y |
-| CAM_10 | PollutionLevel | decimal(10,3) | numeric |  |  |  | Y |
-| CAM_11 | PollutionLevelAdjusted | decimal(10,3) | numeric |  |  |  | Y |
+| CAM_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-01-countrycode) |
+| CAM_03 | AssessmentRegimeId | varchar(50) | string | PK |  | AssessmentRegimeZone | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-03-assessmentregimeid) |
+| CAM_04 | DataAggregationProcessId | varchar(50) | string | PK | [aggregationprocess](https://dd.eionet.europa.eu/vocabulary/aq/aggregationprocess/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-04-dataaggregationprocessid) |
+| CAM_05 | AssessmentMethodId | varchar(50) | string | PK |  | SamplingPoint<br>SamplingProcess<br>SamplingPointLocation<br>ObservationMeasurementResult<br>ModelObjectiveEstimation<br>MOEResultInline<br>MOEResultExternal | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-05-assessmentmethodid) |
+| CAM_02 | ReportingYear | int | numeric | PK |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-02-reportingyear) |
+| CAM_15 | AttainmentId | varchar(50) | string |  |  | CompliancePlanLink<br>PollutionLevelAdjustment | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-15-attainmentid) |
+| CAM_06 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-06-pollutantid) |
+| CAM_07 | AssessmentType | varchar(50) | string |  | [assessmenttype](https://dd.eionet.europa.eu/vocabulary/aq/assessmenttype/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-07-assessmenttype) |
+| CAM_08 | IsExceedance | varchar(5) | string |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-08-isexceedance) |
+| CAM_10 | PollutionLevel | decimal(10,3) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-10-pollutionlevel) |
+| CAM_11 | PollutionLevelAdjusted | decimal(10,3) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-11-pollutionleveladjusted) |
 | CAM_26 | AbsoluteUncertaintyLimit | decimal(10,2) | numeric |  |  |  | N |
-| CAM_12 | RelativeUncertaintyLimit | decimal(10,2) | numeric |  |  |  | Y |
-| CAM_13 | AssessmentMQI | decimal(5,2) | numeric |  |  |  | Y |
-| CAM_14 | CorrectionFlag | bit | boolean |  |  |  | Y |
-| CAM_16 | SRSId | varchar(50) | string |  |  | SpatialRepresentativeness | Y |
-| CAM_17 | PreliminaryReason | varchar(50) | string |  | [exceedancereason](https://dd.eionet.europa.eu/vocabulary/aq/exceedancereason/view) |  | Y |
-| CAM_18 | Deletion | bit | boolean |  |  |  | Y |
-| CAM_09 | DataCoverage | decimal(5,2) | numeric |  |  |  | Y |
+| CAM_12 | RelativeUncertaintyLimit | decimal(10,2) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-12-relativeuncertaintylimit) |
+| CAM_13 | AssessmentMQI | decimal(5,2) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-13-assessmentmqi) |
+| CAM_14 | CorrectionFlag | bit | boolean |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-14-correctionflag) |
+| CAM_16 | SRSId | varchar(50) | string |  |  | SpatialRepresentativeness | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-16-srsid) |
+| CAM_17 | PreliminaryReason | varchar(50) | string |  | [exceedancereason](https://dd.eionet.europa.eu/vocabulary/aq/exceedancereason/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-17-preliminaryreason) |
+| CAM_18 | Deletion | bit | boolean |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-18-deletion) |
+| CAM_09 | DataCoverage | decimal(5,2) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-09-datacoverage) |
 | CAM_19 | Country | varchar(20) | string |  |  |  | N |
 | CAM_20 | SamplingPointReferenceId | varchar(32) | string |  |  |  | N |
 | CAM_21 | Pollutant | varchar(50) | string |  |  |  | N |
@@ -56,7 +56,7 @@ Country or territory ISO2 code.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-01-countrycode)
 
 ### CAM_03 - AssessmentRegimeId
 
@@ -70,7 +70,7 @@ It will be cross-checked against the AssessmentRegimeZone table.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-03-assessmentregimeid)
 
 ### CAM_04 - DataAggregationProcessId
 
@@ -80,7 +80,7 @@ Identifier of the process used for aggregating air quality data into statistical
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-04-dataaggregationprocessid)
 
 ### CAM_05 - AssessmentMethodId
 
@@ -94,7 +94,7 @@ Either SamplingPoint or Model/OBE, it will be cross-checked against the Sampling
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-05-assessmentmethodid)
 
 ### CAM_02 - ReportingYear
 
@@ -104,7 +104,7 @@ Year for which the data has been reported.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-02-reportingyear)
 
 ### CAM_15 - AttainmentId
 
@@ -118,7 +118,7 @@ AttainmentId distinguishes each compliance situation. If there is no exceedance 
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-15-attainmentid)
 
 ### CAM_06 - PollutantId
 
@@ -128,7 +128,7 @@ Code of the air pollutant for which the assessment is being conducted.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-06-pollutantid)
 
 ### CAM_07 - AssessmentType
 
@@ -138,7 +138,7 @@ Classification of assessment methods into common types.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-07-assessmenttype)
 
 ### CAM_08 - IsExceedance
 
@@ -148,7 +148,7 @@ Statement indicating whether pollution levels exceed environmental objectives.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-08-isexceedance)
 
 ### CAM_10 - PollutionLevel
 
@@ -162,7 +162,7 @@ AirPollutionLevel must be reported for every AssessmentMethodId.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-10-pollutionlevel)
 
 ### CAM_11 - PollutionLevelAdjusted
 
@@ -172,7 +172,7 @@ Adjusted concentration level of the air pollutant, accounting for specific corre
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-11-pollutionleveladjusted)
 
 ### CAM_26 - AbsoluteUncertaintyLimit
 
@@ -196,7 +196,7 @@ RelativeUncertaintyLimit must be reported for every AssessmentMethodId which ref
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-12-relativeuncertaintylimit)
 
 ### CAM_13 - AssessmentMQI
 
@@ -206,7 +206,7 @@ Modelling Quality Indicator
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-13-assessmentmqi)
 
 ### CAM_14 - CorrectionFlag
 
@@ -220,7 +220,7 @@ Y/N. Correction is a string/boolean to be used in order to certify that, in case
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-14-correctionflag)
 
 ### CAM_16 - SRSId
 
@@ -234,7 +234,7 @@ Identifier linking to either SPO representativeness or to exceedance extent.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-16-srsid)
 
 ### CAM_17 - PreliminaryReason
 
@@ -248,7 +248,7 @@ This is crucial for distinguishing between different compliance situations in th
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-17-preliminaryreason)
 
 ### CAM_18 - Deletion
 
@@ -262,7 +262,7 @@ Y/N
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-18-deletion)
 
 ### CAM_09 - DataCoverage
 
@@ -276,7 +276,7 @@ One element of DQO (see Directive 2024/2881 Section B.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ComplianceAssessmentMethod.html#cam-09-datacoverage)
 
 ### CAM_19 - Country
 

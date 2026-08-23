@@ -15,16 +15,16 @@
 
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) | In Reporting |
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
-| STA_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) | | Y |
-| STA_02 | StationEoICode | varchar(10) | string | PK | | SamplingPoint | Y |
+| STA_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) | | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-01-countrycode) |
+| STA_02 | StationEoICode | varchar(10) | string | PK | | SamplingPoint | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-02-stationeoicode) |
 | STA_10 | ReportingTime | datetime | datetime | PK | | | N |
-| STA_03 | NetworkId | varchar(50) | string | | | | Y |
-| STA_04 | NetworkName | varchar(150) | string | | | | Y |
-| STA_05 | NetworkOrganisationalLevel | varchar(20) | string | | [administrativelevel](https://dd.eionet.europa.eu/vocabulary/aq/administrativelevel/view) | | Y |
-| STA_06 | Timezone | varchar(20) | string | | [timezone](https://dd.eionet.europa.eu/vocabulary/aq/timezone) | | Y |
-| STA_07 | StationNationalCode | varchar(50) | string | | | | Y |
-| STA_08 | StationName | varchar(50) | string | | | | Y |
-| STA_09 | NetworkDocumentId | varchar(150) | string | | | Documentation | Y |
+| STA_03 | NetworkId | varchar(50) | string | | | | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-03-networkid) |
+| STA_04 | NetworkName | varchar(150) | string | | | | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-04-networkname) |
+| STA_05 | NetworkOrganisationalLevel | varchar(20) | string | | [administrativelevel](https://dd.eionet.europa.eu/vocabulary/aq/administrativelevel/view) | | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-05-networkorganisationallevel) |
+| STA_06 | Timezone | varchar(20) | string | | [timezone](https://dd.eionet.europa.eu/vocabulary/aq/timezone) | | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-06-timezone) |
+| STA_07 | StationNationalCode | varchar(50) | string | | | | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-07-stationnationalcode) |
+| STA_08 | StationName | varchar(50) | string | | | | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-08-stationname) |
+| STA_09 | NetworkDocumentId | varchar(150) | string | | | Documentation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-09-networkdocumentid) |
 | STA_11 | Country | varchar(20) | string | | | | N |
 | STA_12 | City | | | | | | N |
 | STA_13 | CityCode | | | | | | N |
@@ -36,7 +36,7 @@
 
 ## Attribute details
 
-### STA_01 – CountryCode
+### STA_01 - CountryCode
 
 **Content**
 
@@ -44,9 +44,9 @@ Country or territory ISO2 code.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-01-countrycode)
 
-### STA_02 – StationEoICode
+### STA_02 - StationEoICode
 
 **Content**
 
@@ -66,9 +66,9 @@ The same Station can become active again if there are new active sampling points
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-02-stationeoicode)
 
-### STA_10 – ReportingTime
+### STA_10 - ReportingTime
 
 **Content**
 
@@ -76,9 +76,9 @@ Date and time when the information is submitted..
 
 **In Reporting**
 
-N – No corresponding reporting attribute.
+N - No corresponding reporting attribute.
 
-### STA_03 – NetworkId
+### STA_03 - NetworkId
 
 **Content**
 
@@ -86,9 +86,9 @@ Identifier of the air quality network, given by data provider.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-03-networkid)
 
-### STA_04 – NetworkName
+### STA_04 - NetworkName
 
 **Content**
 
@@ -96,9 +96,9 @@ Name of the air quality measurement network, given by data provider.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-04-networkname)
 
-### STA_05 – NetworkOrganisationalLevel
+### STA_05 - NetworkOrganisationalLevel
 
 **Content**
 
@@ -106,9 +106,9 @@ Level of administration or organization responsible for the air quality network 
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-05-networkorganisationallevel)
 
-### STA_06 – Timezone
+### STA_06 - Timezone
 
 **Content**
 
@@ -122,9 +122,9 @@ If TimeZone is modified, all statistics will be recalculated accordingly.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-06-timezone)
 
-### STA_07 – StationNationalCode
+### STA_07 - StationNationalCode
 
 **Content**
 
@@ -132,9 +132,9 @@ National code of the air quality measurement station, given by data provider.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-07-stationnationalcode)
 
-### STA_08 – StationName
+### STA_08 - StationName
 
 **Content**
 
@@ -142,9 +142,9 @@ Name of the air quality measurement station.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-08-stationname)
 
-### STA_09 – NetworkDocumentId
+### STA_09 - NetworkDocumentId
 
 **Content**
 
@@ -152,9 +152,9 @@ Identifier of the documentation on network and station.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/MeasurementStation.html#sta-09-networkdocumentid)
 
-### STA_11 – Country
+### STA_11 - Country
 
 **Content**
 
@@ -162,21 +162,21 @@ Name of the country.
 
 **In Reporting**
 
-N – No corresponding reporting attribute.
+N - No corresponding reporting attribute.
 
-### STA_12 – City
-
-**In Reporting**
-
-N – No corresponding reporting attribute.
-
-### STA_13 – CityCode
+### STA_12 - City
 
 **In Reporting**
 
-N – No corresponding reporting attribute.
+N - No corresponding reporting attribute.
 
-### STA_14 – Deletion
+### STA_13 - CityCode
+
+**In Reporting**
+
+N - No corresponding reporting attribute.
+
+### STA_14 - Deletion
 
 **Content**
 
@@ -184,4 +184,4 @@ Flag to indicate that this element must be deleted..
 
 **In Reporting**
 
-N – No corresponding reporting attribute.
+N - No corresponding reporting attribute.

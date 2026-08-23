@@ -15,21 +15,21 @@
 
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) | In Reporting |
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
-| SPL_01 | CountryCode | varchar(2) | string | PK |  |  | Y |
-| SPL_02 | AssessmentMethodId | varchar(50) | string | PK |  | ComplianceAssessmentMethod<br>SamplingPoint<br>SamplingProcess<br>ObservationMeasurementResult | Y |
-| SPL_03 | LocationBegin | datetime | datetime | PK |  |  | Y |
-| SPL_04 | LocationEnd | datetime | datetime |  |  |  | Y |
-| SPL_05 | StationArea | varchar(100) | string |  | [areaclassification](https://dd.eionet.europa.eu/vocabulary/aq/areaclassification/view) |  | Y |
-| SPL_06 | SamplingPointCategory | varchar(50) | string |  | Code list to be developed |  | Y |
-| SPL_07 | Hotspot | bit | boolean |  |  |  | Y |
-| SPL_08 | Supersite | bit | boolean |  |  |  | Y |
-| SPL_09 | Latitude | decimal(8,4) | numeric |  |  |  | Y |
-| SPL_10 | Longitude | decimal(8,4) | numeric |  |  |  | Y |
-| SPL_11 | Altitude | decimal(10,1) | numeric |  |  |  | Y |
-| SPL_12 | InletHeight | decimal(10,1) | numeric |  |  |  | Y |
-| SPL_13 | BuildingDistance | decimal(10,1) | numeric |  |  |  | Y |
-| SPL_14 | KerbDistance | decimal(10,1) | numeric |  |  |  | Y |
-| SPL_15 | EmissionSourceDistance | decimal(10,1) | numeric |  |  |  | Y |
+| SPL_01 | CountryCode | varchar(2) | string | PK |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-01-countrycode) |
+| SPL_02 | AssessmentMethodId | varchar(50) | string | PK |  | ComplianceAssessmentMethod<br>SamplingPoint<br>SamplingProcess<br>ObservationMeasurementResult | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-02-assessmentmethodid) |
+| SPL_03 | LocationBegin | datetime | datetime | PK |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-03-locationbegin) |
+| SPL_04 | LocationEnd | datetime | datetime |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-04-locationend) |
+| SPL_05 | StationArea | varchar(100) | string |  | [areaclassification](https://dd.eionet.europa.eu/vocabulary/aq/areaclassification/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-05-stationarea) |
+| SPL_06 | SamplingPointCategory | varchar(50) | string |  | Code list to be developed |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-06-samplingpointcategory) |
+| SPL_07 | Hotspot | bit | boolean |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-07-hotspot) |
+| SPL_08 | Supersite | bit | boolean |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-08-supersite) |
+| SPL_09 | Latitude | decimal(8,4) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-09-latitude) |
+| SPL_10 | Longitude | decimal(8,4) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-10-longitude) |
+| SPL_11 | Altitude | decimal(10,1) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-11-altitude) |
+| SPL_12 | InletHeight | decimal(10,1) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-12-inletheight) |
+| SPL_13 | BuildingDistance | decimal(10,1) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-13-buildingdistance) |
+| SPL_14 | KerbDistance | decimal(10,1) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-14-kerbdistance) |
+| SPL_15 | EmissionSourceDistance | decimal(10,1) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-15-emissionsourcedistance) |
 | SPL_16 | Country | varchar(20) | string |  |  |  | N |
 | SPL_17 | X | bigint | numeric |  |  |  | N |
 | SPL_18 | Y | bigint | numeric |  |  |  | N |
@@ -54,7 +54,7 @@ Country or territory ISO2 code.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-01-countrycode)
 
 ### SPL_02 - AssessmentMethodId
 
@@ -64,7 +64,7 @@ Identifier of the assessment method (sampling point), given by data provider.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-02-assessmentmethodid)
 
 ### SPL_03 - LocationBegin
 
@@ -78,7 +78,7 @@ The permissible modifications in the location characteristics will be verified b
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-03-locationbegin)
 
 ### SPL_04 - LocationEnd
 
@@ -88,7 +88,7 @@ End time of the location characteristic(s)
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-04-locationend)
 
 ### SPL_05 - StationArea
 
@@ -102,7 +102,7 @@ A change in station area implies closing the associated sampling points by endin
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-05-stationarea)
 
 ### SPL_06 - SamplingPointCategory
 
@@ -120,7 +120,7 @@ Potential categories: traffic, background, industrial, port, airport, residentia
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-06-samplingpointcategory)
 
 ### SPL_07 - Hotspot
 
@@ -136,7 +136,7 @@ Hotspot relates to the provisions of the recasted Air Quality Directive 2024/288
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-07-hotspot)
 
 ### SPL_08 - Supersite
 
@@ -150,7 +150,7 @@ Y/N.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-08-supersite)
 
 ### SPL_09 - Latitude
 
@@ -160,7 +160,7 @@ Latitude coordinate of the air quality station location (decimal degrees).
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-09-latitude)
 
 ### SPL_10 - Longitude
 
@@ -170,7 +170,7 @@ Longitude coordinate of the air quality station location (decimal degrees).
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-10-longitude)
 
 ### SPL_11 - Altitude
 
@@ -180,7 +180,7 @@ Altitude of the air quality station location in meters above sea level.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-11-altitude)
 
 ### SPL_12 - InletHeight
 
@@ -190,7 +190,7 @@ Height of the sampling inlet where air quality measurements are taken (in meters
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-12-inletheight)
 
 ### SPL_13 - BuildingDistance
 
@@ -200,7 +200,7 @@ Horizontal distance from the sampling inlet to the nearest building (in meters).
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-13-buildingdistance)
 
 ### SPL_14 - KerbDistance
 
@@ -210,7 +210,7 @@ Horizontal distance from the sampling inlet to the nearest road kerb (in meters)
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-14-kerbdistance)
 
 ### SPL_15 - EmissionSourceDistance
 
@@ -220,7 +220,7 @@ Horizontal distance from the main emission source (in meters).
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-15-emissionsourcedistance)
 
 ### SPL_16 - Country
 

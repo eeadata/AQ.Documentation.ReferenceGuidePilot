@@ -564,3 +564,96 @@ footer {
     letter-spacing: 0.08em;
     line-height: 1.2;
 }
+
+/* =========================================================
+   AURA FAMILY NAVIGATION
+   Shell-only addition. Existing Reference Guide greys and
+   core-page styling remain unchanged.
+   ========================================================= */
+
+.wy-side-nav-search {
+    padding: 0 0 10px !important;
+}
+
+.aura-branding {
+    margin: 0 0 10px;
+    background: #4F555A;
+    text-align: center;
+}
+
+.aura-brand-row {
+    padding: 12px 10px 8px;
+    white-space: nowrap;
+}
+
+.aura-eea-link {
+    display: inline-block;
+    vertical-align: middle;
+    width: 115px;
+    margin: 0 4px 0 0;
+    padding: 0 !important;
+}
+
+.aura-eea-logo {
+    display: block !important;
+    width: 100px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    object-fit: contain;
+}
+
+.aura-name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.04em;
+}
+
+.aura-sites {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: right;
+}
+
+.aura-sites a,
+.aura-sites .aura-current {
+    display: block;
+    min-height: 31px;
+    padding: 6px 18px 6px 10px;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+.aura-sites a:hover,
+.aura-sites a:focus {
+    background: rgba(255, 255, 255, 0.14);
+    color: #FFFFFF !important;
+}
+
+.aura-sites .aura-current {
+    background: #FFFFFF;
+    color: #202428 !important;
+    font-weight: 600;
+}
+
+/* Search keeps the Reference/Reporting grey treatment. */
+.wy-side-nav-search input[type="text"] {
+    margin: 0 10px;
+    width: calc(100% - 20px);
+}
+
+/* The AURA block replaces the old project-title/logo construction. */
+.wy-side-nav-search > a.icon-home {
+    display: none !important;
+}

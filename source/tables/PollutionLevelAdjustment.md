@@ -15,11 +15,11 @@
 
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) | In Reporting |
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
-| ADJ_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | Y |
-| ADJ_02 | AttainmentId | varchar(50) | string | PK |  | ComplianceAssessmentMethod | Y |
-| ADJ_03 | AdjustmentSource | varchar(50) | string | PK | [adjustmentsourcetype](https://dd.eionet.europa.eu/vocabulary/aq/adjustmentsourcetype/view) |  | Y |
-| ADJ_04 | AdjustmentAssessmentMethodId | varchar(10) | string |  |  | ModelObjectiveEstimation | Y |
-| ADJ_05 | AdjustmentDocumentId | varchar(150) | string |  |  | Documentation | Y |
+| ADJ_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PollutionLevelAdjustment.html#adj-01-countrycode) |
+| ADJ_02 | AttainmentId | varchar(50) | string | PK |  | ComplianceAssessmentMethod | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PollutionLevelAdjustment.html#adj-02-attainmentid) |
+| ADJ_03 | AdjustmentSource | varchar(50) | string | PK | [adjustmentsourcetype](https://dd.eionet.europa.eu/vocabulary/aq/adjustmentsourcetype/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PollutionLevelAdjustment.html#adj-03-adjustmentsource) |
+| ADJ_04 | AdjustmentAssessmentMethodId | varchar(10) | string |  |  | ModelObjectiveEstimation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PollutionLevelAdjustment.html#adj-04-adjustmentassessmentmethodid) |
+| ADJ_05 | AdjustmentDocumentId | varchar(150) | string |  |  | Documentation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PollutionLevelAdjustment.html#adj-05-adjustmentdocumentid) |
 | ADJ_06 | Country | varchar(20) | string |  |  |  | N |
 | ADJ_07 | Deletion | bit | boolean |  |  |  | N |
 
@@ -37,7 +37,7 @@ Country or territory ISO2 code.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PollutionLevelAdjustment.html#adj-01-countrycode)
 
 ### ADJ_02 - AttainmentId
 
@@ -51,7 +51,7 @@ It will be cross-checked against the ComplianceAssessmentMethod table.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PollutionLevelAdjustment.html#adj-02-attainmentid)
 
 ### ADJ_03 - AdjustmentSource
 
@@ -61,7 +61,7 @@ Description of the source being adjusted (e.g., sea spray, volcanic activity).
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PollutionLevelAdjustment.html#adj-03-adjustmentsource)
 
 ### ADJ_04 - AdjustmentAssessmentMethodId
 
@@ -77,7 +77,7 @@ It will be cross-checked against the Model table, also - indirectly - against th
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PollutionLevelAdjustment.html#adj-04-adjustmentassessmentmethodid)
 
 ### ADJ_05 - AdjustmentDocumentId
 
@@ -87,7 +87,7 @@ Identifier of the report detailing the adjustment procedure given by data provid
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PollutionLevelAdjustment.html#adj-05-adjustmentdocumentid)
 
 ### ADJ_06 - Country
 

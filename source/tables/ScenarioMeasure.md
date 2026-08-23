@@ -15,12 +15,12 @@
 
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) | In Reporting |
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
-| SME_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | Y |
-| SME_02 | ScenarioId | varchar(50) | string | PK |  | ComplianceAssessmentMethod<br>PlanScenario | Y |
-| SME_03 | ScenarioCategory | varchar(20) | string | PK | [scenariocategory](https://dd.eionet.europa.eu/vocabulary/aq/scenariocategory) |  | Y |
-| SME_04 | MeasureGroupId | varchar(50) | string | PK |  | MeasurementStation | Y |
-| SME_05 | MeasureGroupPollutionReduction | decimal(10,2) | numeric |  |  |  | Y |
-| SME_06 | MeasureReductionAssessmentMethodId | varchar(50) | string |  |  | ModelObjectiveEstimation | Y |
+| SME_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-01-countrycode) |
+| SME_02 | ScenarioId | varchar(50) | string | PK |  | ComplianceAssessmentMethod<br>PlanScenario | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-02-scenarioid) |
+| SME_03 | ScenarioCategory | varchar(20) | string | PK | [scenariocategory](https://dd.eionet.europa.eu/vocabulary/aq/scenariocategory) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-03-scenariocategory) |
+| SME_04 | MeasureGroupId | varchar(50) | string | PK |  | MeasurementStation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-04-measuregroupid) |
+| SME_05 | MeasureGroupPollutionReduction | decimal(10,2) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-05-measuregrouppollutionreduction) |
+| SME_06 | MeasureReductionAssessmentMethodId | varchar(50) | string |  |  | ModelObjectiveEstimation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-06-measurereductionassessmentmethodid) |
 | SME_07 | Country | varchar(20) | string |  |  |  | N |
 | SME_08 | Pollutant | varchar(50) | string |  |  |  | N |
 | SME_09 | PollutantId | int | numeric |  |  |  | N |
@@ -42,7 +42,7 @@ Country or territory ISO2 code.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-01-countrycode)
 
 ### SME_02 - ScenarioId
 
@@ -56,7 +56,7 @@ It will be cross-checked against PlanScenario table.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-02-scenarioid)
 
 ### SME_03 - ScenarioCategory
 
@@ -70,7 +70,7 @@ ScenarioCategory: baseline or projection. It should be included in the composite
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-03-scenariocategory)
 
 ### SME_04 - MeasureGroupId
 
@@ -86,7 +86,7 @@ It will be cross-checked against Measure table.
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-04-measuregroupid)
 
 ### SME_05 - MeasureGroupPollutionReduction
 
@@ -100,7 +100,7 @@ Sum of MeasureGroupAirPollutionReduction within ScenarioId should agree with the
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-05-measuregrouppollutionreduction)
 
 ### SME_06 - MeasureReductionAssessmentMethodId
 
@@ -114,7 +114,7 @@ AssessmentMethodId: the model/OBE used for producing the results for the measure
 
 **In Reporting**
 
-Y
+[Y – View reporting attribute](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-06-measurereductionassessmentmethodid)
 
 ### SME_07 - Country
 
