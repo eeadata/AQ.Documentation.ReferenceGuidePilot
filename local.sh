@@ -11,7 +11,7 @@ echo "Building local AQ eReference Guide..."
 
 rm -rf -- "$BUILD_DIR"
 
-python3 -m sphinx \
+/usr/bin/python3 -m sphinx \
     --keep-going \
     -E \
     -a \
