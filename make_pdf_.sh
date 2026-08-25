@@ -3,8 +3,8 @@ set -e
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 DOCS="$ROOT/docs"
-OUT="$ROOT/AQ_Reference_PDF_test_v7.pdf"
-COMBINED="$DOCS/_pdf_test_v7.html"
+OUT="$ROOT/AQ_eReference_Guide.pdf"
+COMBINED="$DOCS/_pdf_reference_guide.html"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 if [ ! -d "$DOCS" ]; then
@@ -16,7 +16,7 @@ if [ ! -x "$CHROME" ]; then
   exit 1
 fi
 
-# Important: v7 keeps the successful v1/v3 rendering method.
+# Important: v8 keeps the successful v1/v3 rendering method.
 # It does NOT reconstruct the HTML with BeautifulSoup.  It keeps the original
 # Sphinx/RTD head and content markup, then makes only small PDF-specific edits.
 python3.13 - "$DOCS" "$COMBINED" <<'PY'
@@ -44,7 +44,31 @@ pages = [
     ("diagram.html", "diagram", "Diagram"),
     (tables_index, "tables-index", "Tables"),
     ("tables/Authority.html", "authority", "Authority"),
+    ("tables/MeasurementStation.html", "measurementstation", "MeasurementStation"),
+    ("tables/SamplingPoint.html", "samplingpoint", "SamplingPoint"),
+    ("tables/SamplingPointLocation.html", "samplingpointlocation", "SamplingPointLocation"),
+    ("tables/SamplingProcess.html", "samplingprocess", "SamplingProcess"),
+    ("tables/ModelObjectiveEstimation.html", "modelobjectiveestimation", "ModelObjectiveEstimation"),
+    ("tables/ObservationMeasurementStatistics.html", "observationmeasurementstatistics", "ObservationMeasurementStatistics"),
+    ("tables/ObservationMeasurementInventory.html", "observationmeasurementinventory", "ObservationMeasurementInventory"),
+    ("tables/MOEResultGrid.html", "moeresultgrid", "MOEResultGrid"),
+    ("tables/MOEResultInventory.html", "moeresultinventory", "MOEResultInventory"),
+    ("tables/ZoneGeometry.html", "zonegeometry", "ZoneGeometry"),
+    ("tables/ZoneGeometryGrid.html", "zonegeometrygrid", "ZoneGeometryGrid"),
     ("tables/AssessmentRegimeZone.html", "assessmentregimezone", "AssessmentRegimeZone"),
+    ("tables/ComplianceAssessmentMethod.html", "complianceassessmentmethod", "ComplianceAssessmentMethod"),
+    ("tables/SpatialRepresentativeness.html", "spatialrepresentativeness", "SpatialRepresentativeness"),
+    ("tables/SRSGrid.html", "srsgrid", "SRSGrid"),
+    ("tables/SRSInventory.html", "srsinventory", "SRSInventory"),
+    ("tables/PollutionLevelAdjustment.html", "pollutionleveladjustment", "PollutionLevelAdjustment"),
+    ("tables/CompliancePlanLink.html", "complianceplanlink", "CompliancePlanLink"),
+    ("tables/Plan.html", "plan", "Plan"),
+    ("tables/PlanScenario.html", "planscenario", "PlanScenario"),
+    ("tables/SourceApportionment.html", "sourceapportionment", "SourceApportionment"),
+    ("tables/ScenarioMeasure.html", "scenariomeasure", "ScenarioMeasure"),
+    ("tables/Measure.html", "measure", "Measure"),
+    ("tables/Documentation.html", "documentation", "Documentation"),
+    ("tables/ObservationMeasurementResultPNSD.html", "observationmeasurementresultpnsd", "ObservationMeasurementResultPNSD"),
 ]
 
 page_to_anchor = {rel: f"pdf-{anchor}" for rel, anchor, _ in pages}
@@ -125,7 +149,7 @@ for i, (rel, short, label) in enumerate(pages):
     body = extract_main(text, rel)
 
     # v1's small path correction, required because all content is now hosted in
-    # docs/_pdf_test_v7.html rather than in docs/tables/*.html.
+    # docs/_pdf_test_v8.html rather than in docs/tables/*.html.
     if rel.startswith("tables/"):
         body = body.replace('src="../', 'src="').replace("src='../", "src='")
         body = body.replace('href="../', 'href="').replace("href='../", "href='")
@@ -156,7 +180,16 @@ extra_css = r'''
   }
 
   @media print {
-    @page { size: A4 portrait; margin: 12mm; }
+    @page {
+      size: A4 portrait;
+      margin: 8mm 8mm 12mm 8mm;
+
+      @bottom-center {
+        content: counter(page);
+        font-size: 8pt;
+        color: #666;
+      }
+    }
     .pdf-shell { max-width: none; margin: 0; padding: 0; }
 
     /* The RTD theme normally puts wide tables in a horizontally scrolling
@@ -176,15 +209,15 @@ extra_css = r'''
     /* v3 was visually good but the final column could still fall beyond the
        printable edge.  Chromium's zoom scales the complete table as a unit,
        preserving the RTD proportions and avoiding ugly mid-word splitting. */
-    /* Attribute overview tables: keep all 8 columns readable on A4.
-       Let Chromium size the columns naturally; compact typography is much
-       better here than forcing narrow fixed-width columns. */
+    /* Attribute overview tables: readable rather than microscopic.
+       Eight columns fit on A4 by giving them sensible widths and only
+       allowing the genuinely long text columns to wrap. */
     table.docutils {
-      table-layout: auto !important;
+      table-layout: fixed !important;
       width: 100% !important;
       max-width: 100% !important;
-      font-size: 5.4pt !important;
-      line-height: 1.08 !important;
+      font-size: 7.0pt !important;
+      line-height: 1.12 !important;
       box-sizing: border-box !important;
     }
     table.docutils th,
@@ -193,29 +226,52 @@ extra_css = r'''
     table.docutils td p,
     table.docutils th a,
     table.docutils td a {
-      font-size: 5.4pt !important;
-      line-height: 1.08 !important;
+      font-size: 7.0pt !important;
+      line-height: 1.12 !important;
     }
     table.docutils th,
     table.docutils td {
       box-sizing: border-box !important;
       min-width: 0 !important;
-      max-width: none !important;
-      padding: 1.5px 2px !important;
+      padding: 2px 2.5px !important;
       vertical-align: top !important;
       word-break: normal !important;
-      overflow-wrap: normal !important;
       hyphens: none !important;
     }
-    /* Keep identifiers and short technical values intact. */
+
+    /* Widths tuned for the 8-column Reference attribute overview. */
+    table.docutils th:nth-child(1), table.docutils td:nth-child(1) { width: 8% !important; }
+    table.docutils th:nth-child(2), table.docutils td:nth-child(2) { width: 20% !important; }
+    table.docutils th:nth-child(3), table.docutils td:nth-child(3) { width: 13% !important; }
+    table.docutils th:nth-child(4), table.docutils td:nth-child(4) { width: 12% !important; }
+    table.docutils th:nth-child(5), table.docutils td:nth-child(5) { width: 8% !important; }
+    table.docutils th:nth-child(6), table.docutils td:nth-child(6) { width: 15% !important; }
+    table.docutils th:nth-child(7), table.docutils td:nth-child(7) { width: 16% !important; }
+    table.docutils th:nth-child(8), table.docutils td:nth-child(8) { width: 8% !important; }
+
+    /* The compact table list below the diagram has ample room on the page,
+       so make it more comfortable to read than the dense attribute tables. */
+    .pdf-source-page[data-source="diagram.html"] table.docutils,
+    .pdf-source-page[data-source="diagram.html"] table.docutils th,
+    .pdf-source-page[data-source="diagram.html"] table.docutils td,
+    .pdf-source-page[data-source="diagram.html"] table.docutils th p,
+    .pdf-source-page[data-source="diagram.html"] table.docutils td p,
+    .pdf-source-page[data-source="diagram.html"] table.docutils th a,
+    .pdf-source-page[data-source="diagram.html"] table.docutils td a {
+      font-size: 9pt !important;
+      line-height: 1.25 !important;
+    }
+
+    /* Keep codes and short technical values intact. */
     table.docutils th:nth-child(1), table.docutils td:nth-child(1),
     table.docutils th:nth-child(3), table.docutils td:nth-child(3),
     table.docutils th:nth-child(4), table.docutils td:nth-child(4),
     table.docutils th:nth-child(5), table.docutils td:nth-child(5),
     table.docutils th:nth-child(8), table.docutils td:nth-child(8) {
       white-space: nowrap !important;
+      overflow-wrap: normal !important;
     }
-    /* Longer names may wrap only if absolutely necessary. */
+    /* Attribute names, code lists and related-table names may wrap when needed. */
     table.docutils th:nth-child(2), table.docutils td:nth-child(2),
     table.docutils th:nth-child(6), table.docutils td:nth-child(6),
     table.docutils th:nth-child(7), table.docutils td:nth-child(7) {
@@ -240,7 +296,7 @@ extra_css = r'''
       margin-top: 16px !important;
       margin-bottom: 20px !important;
     }
-    .rst-content a.reporting-table-card {
+    a.reporting-table-card {
       display: flex !important;
       flex-direction: column !important;
       min-width: 0 !important;
@@ -255,14 +311,14 @@ extra_css = r'''
       text-decoration: none !important;
       box-shadow: none !important;
     }
-    .rst-content .reporting-table-title {
+    .reporting-table-title {
       min-height: 30px !important;
       margin-bottom: 4px !important;
       font-size: 8pt !important;
       font-weight: 600 !important;
-      line-height: 1.08 !important;
+      line-height: 1.12 !important;
     }
-    .rst-content .reporting-table-image {
+    .reporting-table-image {
       display: flex !important;
       flex: 1 !important;
       align-items: center !important;
@@ -271,7 +327,7 @@ extra_css = r'''
       min-height: 0 !important;
       overflow: hidden !important;
     }
-    .rst-content .reporting-table-image img {
+    .reporting-table-image img {
       display: block !important;
       width: 100% !important;
       height: 95px !important;
@@ -281,25 +337,27 @@ extra_css = r'''
     }
 
     /* Darth Vader cards: explicit print rules, not dependent on hover/screen CSS. */
-    .rst-content a.reporting-table-card.reference-only-table {
+    a.reporting-table-card.reference-only-table {
       background: #2b2f33 !important;
       border-color: #111417 !important;
-      box-shadow: 0 3px 8px rgba(0,0,0,.28) !important;
+      box-shadow: inset 0 0 0 1000px #2b2f33, 0 3px 8px rgba(0,0,0,.28) !important;
     }
-    .rst-content a.reporting-table-card.reference-only-table .reporting-table-title {
+    a.reporting-table-card.reference-only-table .reporting-table-title {
       color: #ffffff !important;
     }
-    .rst-content a.reporting-table-card.reference-only-table .reporting-table-image {
+    a.reporting-table-card.reference-only-table .reporting-table-image {
       background: #3a3f44 !important;
+      box-shadow: inset 0 0 0 1000px #3a3f44 !important;
     }
-    .rst-content a.reporting-table-card.reference-only-table .reference-only-badge,
-    .rst-content .reference-only-badge {
+    a.reporting-table-card.reference-only-table .reference-only-badge,
+    .reference-only-badge {
       display: inline-block !important;
       align-self: center !important;
       margin: 2px 0 4px !important;
       padding: 2px 5px !important;
       color: #ffffff !important;
       background: #0d0f11 !important;
+      box-shadow: inset 0 0 0 1000px #0d0f11 !important;
       border: 1px solid #686d72 !important;
       border-radius: 3px !important;
       font-size: 6.2pt !important;
@@ -324,6 +382,33 @@ extra_css = r'''
       page-break-after: avoid;
     }
   }
+
+/* PDF table readability: centre every cell and wrap long content safely. */
+table th,
+table td {
+    text-align: center !important;
+    vertical-align: middle !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+}
+
+table th *,
+table td * {
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+}
+
+table th a,
+table td a,
+table th code,
+table td code {
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+}
+
 </style>
 '''
 
@@ -340,25 +425,16 @@ print("Created temporary combined HTML:", out)
 PY
 
 echo
-echo "Creating v7 PDF test with Chrome..."
+echo "Creating v8 PDF test with Chrome..."
 "$CHROME" \
   --headless \
   --disable-gpu \
   --no-pdf-header-footer \
   --print-to-pdf="$OUT" \
-  "file://$COMBINED"
-
+"$COMBINED" \
+2>/dev/null
 echo
 echo "SUCCESS"
 echo "PDF created at:"
 echo "$OUT"
-echo
-echo "v7 keeps the successful v1/v3 rendering method and adds:"
-echo "  - the Tables index page before the individual table pages
-  - forced PDF card styling, including Reference-only Darth Vader cards
-  - internal links between included pages"
-echo "  - compact 8-column attribute tables with intact identifiers"
-echo "  - hard page breaks between source pages"
-echo "  - removal of Chrome's print header/footer"
-echo
 echo "The guide source files were not modified."
