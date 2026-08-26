@@ -372,6 +372,27 @@ extra_css = r'''
       overflow-wrap: break-word !important;
     }
 
+    /* Final Reference PDF table override.
+       Keep the tuned 8-column widths above, but make every table cell centred
+       and vertically centred, and allow text to wrap whenever required.
+       This deliberately comes late so it wins over RTD and earlier nth-child
+       nowrap rules. */
+    .pdf-source-page table.docutils th,
+    .pdf-source-page table.docutils td,
+    .pdf-source-page table.docutils th p,
+    .pdf-source-page table.docutils td p,
+    .pdf-source-page table.docutils th a,
+    .pdf-source-page table.docutils td a,
+    .pdf-source-page table.docutils th code,
+    .pdf-source-page table.docutils td code {
+      text-align: center !important;
+      vertical-align: middle !important;
+      white-space: normal !important;
+      overflow-wrap: anywhere !important;
+      word-break: break-word !important;
+      min-width: 0 !important;
+    }
+
     img, svg {
       max-width: 100% !important;
       height: auto !important;
@@ -382,6 +403,8 @@ extra_css = r'''
       page-break-after: avoid;
     }
   }
+
+
 </style>
 '''
 
