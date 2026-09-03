@@ -25,10 +25,10 @@
 | MEA_07 | MeasureType | varchar(50) | string |  | [measuretype](https://dd.eionet.europa.eu/vocabulary/aq/measuretype/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-07-measuretype) |
 | MEA_08 | SourceSector | varchar(50) | string |  | [sourcesectors](https://dd.eionet.europa.eu/vocabulary/aq/sourcesectors/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-08-sourcesector) |
 | MEA_09 | SpatialScale | varchar(50) | string |  | [spatialscale](https://dd.eionet.europa.eu/vocabulary/aq/spatialscale/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-09-spatialscale) |
-| MEA_10 | ImplementationBegin | date | datetime |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-10-implementationbegin) |
-| MEA_11 | ImplementationEnd | date | datetime |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-11-implementationend) |
+| MEA_10 | ImplementationBegin | date | date |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-10-implementationbegin) |
+| MEA_11 | ImplementationEnd | date | date |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-11-implementationend) |
 | MEA_12 | MeasureCost | decimal(18,2) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-12-measurecost) |
-| MEA_13 | FullEffectDate | date | datetime |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-13-fulleffectdate) |
+| MEA_13 | FullEffectDate | date | date |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-13-fulleffectdate) |
 | MEA_14 | MeasureStatus | varchar(50) | string |  | [measureimplementationstatus](https://dd.eionet.europa.eu/vocabulary/aq/measureimplementationstatus/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-14-measurestatus) |
 | MEA_15 | ReasonIfMeasureNotUsed | varchar(50) | string |  | [reasonifmeasurenotused](https://dd.eionet.europa.eu/vocabulary/aq/reasonifmeasurenotused) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-15-reasonifmeasurenotused) |
 | MEA_16 | Deletion | bit | boolean |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/Measure.html#mea-16-deletion) |
@@ -36,6 +36,10 @@
 
 ```{note}
 `ReportingTime` and `Country` are Reference attributes without a corresponding attribute in the reporting data model.
+```
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
 ```
 
 ## Attribute details
@@ -231,4 +235,3 @@ Name of the country.
 **In Reporting**
 
 N - No corresponding reporting attribute.
-

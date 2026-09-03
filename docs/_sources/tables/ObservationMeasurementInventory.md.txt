@@ -16,7 +16,7 @@
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) | In Reporting |
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
 | OMI_01 | CountryCode | varchar(2) | string | PK |  |  | N |
-| OMI_02 | AssessmentMethodId | varchar(50) | string | PK |  |  | N |
+| OMI_02 | AssessmentMethodId | varchar(100) | string | PK |  |  | N |
 | OMI_08 | Validity | int | numeric | PK |  |  | N |
 | OMI_09 | Verification | int | numeric | PK |  |  | N |
 | OMI_11 | TimeResolution | varchar(10) | string | PK |  |  | N |
@@ -37,6 +37,10 @@
 
 ```{note}
 There is no corresponding table in the reporting data model. Therefore, all attributes are marked `N`.
+```
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
 ```
 
 ## Attribute details
@@ -230,4 +234,3 @@ Flag to indicate that this element must be deleted.
 **In Reporting**
 
 N - No corresponding reporting table.
-

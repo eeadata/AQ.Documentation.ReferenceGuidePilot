@@ -25,7 +25,7 @@
 | PSC_08 | ScenarioYear | int | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PlanScenario.html#psc-08-scenarioyear) |
 | PSC_09 | ScenarioPollutionLevel | decimal(10,2) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PlanScenario.html#psc-09-scenariopollutionlevel) |
 | PSC_10 | ExposedPopulation | int | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PlanScenario.html#psc-10-exposedpopulation) |
-| PSC_11 | ScenarioAssessmentMethodId | varchar(50) | string |  |  | ModelObjectiveEstimation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PlanScenario.html#psc-11-scenarioassessmentmethodid) |
+| PSC_11 | ScenarioAssessmentMethodId | varchar(100) | string |  |  | ModelObjectiveEstimation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/PlanScenario.html#psc-11-scenarioassessmentmethodid) |
 | PSC_12 | Country | varchar(20) | string |  |  |  | N |
 | PSC_13 | Pollutant | varchar(50) | string |  |  |  | N |
 | PSC_14 | DataAggregationProcess | varchar(XXX) | string |  |  |  | N |

@@ -20,7 +20,7 @@
 | SME_03 | ScenarioCategory | varchar(20) | string | PK | [scenariocategory](https://dd.eionet.europa.eu/vocabulary/aq/scenariocategory) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-03-scenariocategory) |
 | SME_04 | MeasureGroupId | varchar(50) | string | PK |  | MeasurementStation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-04-measuregroupid) |
 | SME_05 | MeasureGroupPollutionReduction | decimal(10,2) | numeric |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-05-measuregrouppollutionreduction) |
-| SME_06 | MeasureReductionAssessmentMethodId | varchar(50) | string |  |  | ModelObjectiveEstimation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-06-measurereductionassessmentmethodid) |
+| SME_06 | MeasureReductionAssessmentMethodId | varchar(100) | string |  |  | ModelObjectiveEstimation | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/ScenarioMeasure.html#sme-06-measurereductionassessmentmethodid) |
 | SME_07 | Country | varchar(20) | string |  |  |  | N |
 | SME_08 | Pollutant | varchar(50) | string |  |  |  | N |
 | SME_09 | PollutantId | int | numeric |  |  |  | N |

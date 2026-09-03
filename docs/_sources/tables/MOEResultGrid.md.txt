@@ -16,7 +16,7 @@
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) | In Reporting |
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
 | MOG_01 | CountryCode | varchar(2) | string | PK |  |  | N |
-| MRG_02 | AssessmentMethodId | varchar(50) | string | PK |  |  | N |
+| MRG_02 | AssessmentMethodId | varchar(100) | string | PK |  |  | N |
 | MRG_03 | Start | datetime | datetime | PK |  |  | N |
 | MRG_04 | DataAggregationProcessId | varchar(50) | string | PK |  |  | N |
 | MRG_05 | X | bigint | numeric | PK |  |  | N |
@@ -41,6 +41,10 @@
 
 ```{note}
 There is no corresponding table in the reporting data model. Therefore, all attributes are marked `N`.
+```
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
 ```
 
 ## Attribute details
@@ -270,4 +274,3 @@ Flag to indicate that this element must be deleted.
 **In Reporting**
 
 N - No corresponding reporting table.
-

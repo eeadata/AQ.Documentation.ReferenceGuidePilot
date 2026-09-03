@@ -16,7 +16,7 @@
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) | In Reporting |
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
 | OMP_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | Y |
-| OMP_02 | AssessmentMethodId | varchar(50) | string | PK |  |  | Y |
+| OMP_02 | AssessmentMethodId | varchar(100) | string | PK |  |  | Y |
 | OMP_03 | Start | datetime | datetime | PK |  |  | Y |
 | OMP_04 | LowerRange | int | numeric | PK |  |  | Y |
 | OMP_05 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  | Y |
@@ -32,6 +32,10 @@
 | OMP_15 | RelativeHumidity | decimal(5,2) | numeric |  |  |  | Y |
 | OMP_16 | Pressure | decimal(5,2) | numeric |  |  |  | Y |
 | OMP_17 | Inversion | varchar(20) | string |  | [PNSDinversion](https://dd.eionet.europa.eu/vocabulary/aq/PNSDinversion) |  | Y |
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
+```
 
 ## Attribute details
 
@@ -216,4 +220,3 @@ Inversion method used by country (code list flag).
 **In Reporting**
 
 Y
-

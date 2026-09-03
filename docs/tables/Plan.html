@@ -209,7 +209,7 @@
 <tr class="row-even"><td><p>PLA_08</p></td>
 <td><p>PlanAdoptionDate</p></td>
 <td><p>date</p></td>
-<td><p>datetime</p></td>
+<td><p>date</p></td>
 <td><p></p></td>
 <td><p></p></td>
 <td><p></p></td>
@@ -218,7 +218,7 @@
 <tr class="row-odd"><td><p>PLA_09</p></td>
 <td><p>PlanBeginDate</p></td>
 <td><p>date</p></td>
-<td><p>datetime</p></td>
+<td><p>date</p></td>
 <td><p></p></td>
 <td><p></p></td>
 <td><p></p></td>
@@ -227,7 +227,7 @@
 <tr class="row-even"><td><p>PLA_10</p></td>
 <td><p>PlanEndDate</p></td>
 <td><p>date</p></td>
-<td><p>datetime</p></td>
+<td><p>date</p></td>
 <td><p></p></td>
 <td><p></p></td>
 <td><p></p></td>
@@ -265,6 +265,10 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There is no corresponding table in the reporting data model. Therefore, all attributes are marked <code class="docutils literal notranslate"><span class="pre">N</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Attributes with ReportNet3 data type <code class="docutils literal notranslate"><span class="pre">date</span></code> or <code class="docutils literal notranslate"><span class="pre">datetime</span></code> shall use the ISO 8601 format. Date-time values may include a local UTC offset.</p>
 </div>
 </section>
 <section id="attribute-details">

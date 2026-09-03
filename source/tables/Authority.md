@@ -33,6 +33,10 @@
 `ReportingTime`, `Country` and `Deletion` are Reference attributes without a corresponding attribute in the reporting data model.
 ```
 
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
+```
+
 ## Attribute details
 
 ### AUT_01 - CountryCode

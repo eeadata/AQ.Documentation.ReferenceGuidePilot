@@ -16,7 +16,7 @@
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) | In Reporting |
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
 | SPL_01 | CountryCode | varchar(2) | string | PK |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-01-countrycode) |
-| SPL_02 | AssessmentMethodId | varchar(50) | string | PK |  | ComplianceAssessmentMethod<br>SamplingPoint<br>SamplingProcess<br>ObservationMeasurementResult | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-02-assessmentmethodid) |
+| SPL_02 | AssessmentMethodId | varchar(100) | string | PK |  | ComplianceAssessmentMethod<br>SamplingPoint<br>SamplingProcess<br>ObservationMeasurementResult | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-02-assessmentmethodid) |
 | SPL_03 | LocationBegin | datetime | datetime | PK |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-03-locationbegin) |
 | SPL_04 | LocationEnd | datetime | datetime |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-04-locationend) |
 | SPL_05 | StationArea | varchar(100) | string |  | [areaclassification](https://dd.eionet.europa.eu/vocabulary/aq/areaclassification/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingPointLocation.html#spl-05-stationarea) |
@@ -42,6 +42,10 @@
 
 ```{note}
 `Country`, `X`, `Y`, `GridNum10m`, `GridNum100m`, `GridNum1km`, `GridNum10km`, `Deletion` and `SamplingPointType` are Reference attributes without a corresponding attribute in the reporting data model.
+```
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
 ```
 
 ## Attribute details
@@ -311,4 +315,3 @@ Type of air quality measurement station (background, industrial, traffic-related
 **In Reporting**
 
 N - No corresponding reporting attribute.
-

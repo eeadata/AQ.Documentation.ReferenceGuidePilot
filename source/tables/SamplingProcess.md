@@ -17,7 +17,7 @@
 | -------------- | -------------- | ---------------- | -------------------- | ---------- | --------- | ---------------- | :----------: |
 | SPP_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingProcess.html#spp-01-countrycode) |
 | SPP_02 | ProcessId | varchar(150) | string | PK |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingProcess.html#spp-02-processid) |
-| SPP_03 | AssessmentMethodId | varchar(50) | string | PK |  | ComplianceAssessmentMethod<br>SamplingPoint<br>SamplingPointLocation<br>ObservationMeasurementResult | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingProcess.html#spp-03-assessmentmethodid) |
+| SPP_03 | AssessmentMethodId | varchar(100) | string | PK |  | ComplianceAssessmentMethod<br>SamplingPoint<br>SamplingPointLocation<br>ObservationMeasurementResult | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingProcess.html#spp-03-assessmentmethodid) |
 | SPP_04 | ProcessActivityBegin | datetime | datetime | PK |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingProcess.html#spp-04-processactivitybegin) |
 | SPP_05 | ProcessActivityEnd | datetime | datetime |  |  |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingProcess.html#spp-05-processactivityend) |
 | SPP_06 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  | [Y](https://eeadata.github.io/AQ.Documentation.ReportingGuide/tables/SamplingProcess.html#spp-06-pollutantid) |
@@ -36,6 +36,10 @@
 
 ```{note}
 `Country`, `SamplingPointReferenceId`, `Pollutant` and `Deletion` are Reference attributes without a corresponding attribute in the reporting data model.
+```
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
 ```
 
 ## Attribute details
@@ -232,4 +236,3 @@ Flag to indicate that this element must be deleted.
 **In Reporting**
 
 N - No corresponding reporting attribute.
-
